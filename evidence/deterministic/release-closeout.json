@@ -1,0 +1,21 @@
+{
+  "case_id": "csf-amplitude-modules-2026-08-28",
+  "checks": {
+    "accessible_html": "pass",
+    "asset_hashes": "pass",
+    "claim_ceiling": "pass",
+    "junit_parity": "pass",
+    "licence_and_status": "pass",
+    "optimized_package_semantics": "pass",
+    "ordinary_package_semantics": "pass",
+    "release_binding": "pass"
+  },
+  "claim_id": "amplitude-modules-fused-support-bautin-bound-v0.1.0-candidate",
+  "content_commit": "dc4a06111e30918010fff95823bb1795e28a8f51",
+  "content_tree": "e9731015c4711a8b72073a4d1fa5023b1368977e",
+  "receipt_sha256": "8428f0890c25e2d15c0a63cbf7b0949fb2bf3d206f67a9559133617ef9ac3a3c",
+  "recorded_at": "2026-08-28T11:54:15Z",
+  "schema": "evidence-press-release-closeout-v1",
+  "status": "pass",
+  "target_sha256": "aa1e73f62ccb89bae6ff00aaee844721172eca515d4da64c4c41539e51977b13"
+}

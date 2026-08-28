@@ -1,0 +1,94 @@
+{
+  "assurance": {
+    "class": "anonymous_unrefereed_theorem_candidate",
+    "claim_ceiling": "Two Atlas-family classifications and one ordinary coefficient-Bautin theorem candidate.",
+    "not_established": [
+      "three historically posed open problems solved",
+      "independent specialist validation",
+      "journal peer review",
+      "formal verification",
+      "settled novelty or priority",
+      "real planar limit-cycle bound"
+    ]
+  },
+  "case_id": "csf-amplitude-modules-2026-08-28",
+  "claim_id": "amplitude-modules-fused-support-bautin-bound-v0.1.0-candidate",
+  "editorial_closeout": {
+    "confirmation_report": {
+      "path": "evidence/editorial/07_CONFIRMATION_R2.md",
+      "sha256": "05a876e92465ef6b628b1913ec4fb56a66727ed24715ced28601972239713d0e",
+      "verdict": "hold_pending_deterministic_release_deliverables_only"
+    },
+    "deterministic_conditions": {
+      "accessible_html": "pass",
+      "claim_ceiling_preserved": "pass",
+      "immutable_release_binding": "pass",
+      "junit_ordinary_optimized_parity": "pass",
+      "licence_and_status_reconciled": "pass"
+    },
+    "final_disposition": "accepted_for_anonymous_unrefereed_candidate",
+    "further_model_review_used": false
+  },
+  "evidence": {
+    "accessible_html": {
+      "path": "release-assets/CANDIDATE_PREPRINT.html",
+      "sha256": "b9e4a0751cab2fe05fc121dc255e0d3bc7a345c8b4cea1988ef4693ce9db5277",
+      "size_bytes": 271252
+    },
+    "fast_gate_plan": {
+      "path": "evidence/deterministic/amplitude-modules-r2-fast-gates.json",
+      "sha256": "10c7c449fbd6f865166c23a888da4b6eaebb4747a779dc3a189c6effb5044920"
+    },
+    "fast_gate_receipt": {
+      "path": "evidence/deterministic/amplitude-modules-r2-fast-gates-receipt.json",
+      "sha256": "519a14c21672d8ab987f061ad7861b92130ea436ac08f34c919dc5468a8c1583"
+    },
+    "junit": {
+      "aggregate": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 9
+      },
+      "optimized_path": "evidence/junit/optimized.xml",
+      "optimized_sha256": "29320033cdee706a27fd3e4076eede9890fd5cf169c42e61e9715c85c2afa94a",
+      "ordinary_path": "evidence/junit/ordinary.xml",
+      "ordinary_sha256": "627092c7a57eaf32d5bd6b79420e5a96f6314688208e882b6cdcd88e458c2882",
+      "parity_path": "evidence/junit/junit-parity.json",
+      "parity_sha256": "4b6e51616a935e6b22073a3065d562878d5a19b13931180791e4fbfc6997cddb"
+    },
+    "pdf": {
+      "path": "scientific-package/CANDIDATE_PREPRINT.pdf",
+      "sha256": "5a4c00f34873e9a0c691ce375a40f78449b671b9fe2bdfcfe1ea7deead4ebb99",
+      "size_bytes": 469345
+    },
+    "replay_receipt": {
+      "canonical_receipt_sha256": "926b77cef970d241b91b3cbecb103a6fa04ddaeb92b87a1bda7e411614310d64",
+      "path": "scientific-package/PACKAGE_INTEGRITY_RECEIPT.json",
+      "physical_sha256": "979e976b1f57220d86cdc56ae7334bf5755ea5b64308870d085f987ec93b10a0"
+    },
+    "scientific_manifest": {
+      "entry_count": 72,
+      "path": "scientific-package/PACKAGE_MANIFEST.json",
+      "sha256": "699e07bf26cfbc4d4c4f6a9ed21cb3bee3b543d5a331d3fbecdc4d4301b4c186"
+    },
+    "scientific_target": {
+      "member_count": 74,
+      "path": "release-assets/amplitude-modules-fused-support-bautin-bound-v0.1.0-candidate-r2.zip",
+      "sha256": "aa1e73f62ccb89bae6ff00aaee844721172eca515d4da64c4c41539e51977b13",
+      "size_bytes": 719888
+    }
+  },
+  "public_content": {
+    "content_commit": "dc4a06111e30918010fff95823bb1795e28a8f51",
+    "content_tree": "e9731015c4711a8b72073a4d1fa5023b1368977e",
+    "repository": "https://github.com/ipitchford/amplitude-modules-fused-support-bautin-bound",
+    "repository_manifest": "MANIFEST.sha256"
+  },
+  "review_target": {
+    "preflight_git_head": "52504ae815f61841325c6cda3b414d69dd55c702",
+    "reviewed_archive_sha256": "aa1e73f62ccb89bae6ff00aaee844721172eca515d4da64c4c41539e51977b13"
+  },
+  "schema": "evidence-press-release-binding-v1",
+  "version": "0.1.0-candidate"
+}
