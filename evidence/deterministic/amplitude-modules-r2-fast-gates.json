@@ -1,0 +1,80 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "check_candidate_package.py",
+        "--root",
+        ".",
+        "--exact-root"
+      ],
+      "id": "package-semantic-ordinary"
+    },
+    {
+      "argv": [
+        "python3",
+        "-O",
+        "check_candidate_package.py",
+        "--root",
+        ".",
+        "--exact-root"
+      ],
+      "id": "package-semantic-optimized"
+    },
+    {
+      "argv": [
+        "jq",
+        "-e",
+        ".status == \"pass\" and .replay_requested == true and .manifest_sha256 == \"699e07bf26cfbc4d4c4f6a9ed21cb3bee3b543d5a331d3fbecdc4d4301b4c186\" and .command_execution_count == 13 and .artifact_comparison_count == 14 and .package_allowlist_verified == true and .exact_release_root_verified == true and .receipt_sha256 == \"926b77cef970d241b91b3cbecb103a6fa04ddaeb92b87a1bda7e411614310d64\" and ([.replays[].byte_identical] | all)",
+        "PACKAGE_INTEGRITY_RECEIPT.json"
+      ],
+      "id": "stored-replay-receipt"
+    },
+    {
+      "argv": [
+        "jq",
+        "-e",
+        "(.sources | length) == 24 and ([.sources[] | .authorization_status == \"AUTHORIZED_REFERENCE_ONLY_NOT_REDISTRIBUTED\"] | all) and ([.sources[].source_id] | length == (unique | length))",
+        "SOURCE_PROVENANCE.json"
+      ],
+      "id": "source-provenance"
+    },
+    {
+      "argv": [
+        "jq",
+        "-e",
+        ".decision == \"MAJOR_REVISION_HOLD_FOR_REPAIR\" and .repair_status == \"implementation_complete_pending_rebuild_and_preflight\" and .assurance_class == \"internal_model_mediated_editorial_review\" and (.panel | length) == 5 and .confirmation.status == \"pending\"",
+        "EDITORIAL_DISPOSITION.json"
+      ],
+      "id": "editorial-disposition"
+    },
+    {
+      "argv": [
+        "qpdf",
+        "--check",
+        "CANDIDATE_PREPRINT.pdf"
+      ],
+      "id": "pdf-structure"
+    },
+    {
+      "argv": [
+        "pdfinfo",
+        "CANDIDATE_PREPRINT.pdf"
+      ],
+      "id": "pdf-metadata"
+    },
+    {
+      "argv": [
+        "shasum",
+        "-a",
+        "256",
+        "PACKAGE_MANIFEST.json",
+        "CANDIDATE_PREPRINT.pdf",
+        "PACKAGE_INTEGRITY_RECEIPT.json"
+      ],
+      "id": "release-hashes"
+    }
+  ],
+  "name": "amplitude-modules-r2-publication-ready-preflight",
+  "schemaVersion": "1.0"
+}

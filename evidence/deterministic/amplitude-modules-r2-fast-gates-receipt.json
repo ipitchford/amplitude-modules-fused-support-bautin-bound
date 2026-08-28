@@ -1,0 +1,134 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "check_candidate_package.py",
+        "--root",
+        ".",
+        "--exact-root"
+      ],
+      "completedAt": "2026-08-28T11:32:14.636Z",
+      "exitCode": 0,
+      "id": "package-semantic-ordinary",
+      "outputSha256": "997a3be4caa9c1f2f5d72ec03ca9c3db3dc43a5bdbadc8295ec901f55736e132",
+      "outputTail": "{\n  \"artifact_comparison_count\": 0,\n  \"claim_boundary\": {\n    \"established\": \"exact package-member identity, internal receipt integrity, and claim-boundary presence\",\n    \"not_established\": [\n      \"byte-identical computational replay was not requested or executed in this run\",\n      \"independent validity of the reconstructed support theorem\",\n      \"historical novelty or priority\",\n      \"independent review, peer review, or publication readiness\",\n      \"independent status for any simulated referee report\",\n      \"authorization to publish or deploy\"\n    ]\n  },\n  \"command_execution_count\": 0,\n  \"embedded_receipt_digests\": {\n    \"amplitude_order_oracle_receipt.json\": \"f70eb6ba7895a83bc18caaf70c459d511eaa60380dacf644d80d5edbba10f625\",\n    \"bautin_content_bridge_receipt.json\": \"a60711a4ec7337ee0d2cb03ee858858d0e60a33a2efb42bfb1b551a3b5d6aa09\",\n    \"dickson_amplitude_receipt.json\": \"47384322b1b27ac1c40abf9d8ac35c88c590f1b2049d80372e4ec56519c12103\",\n    \"exceptional_amplitude_receipt.json\": \"5f5db74d46fcc6f0fa4d2d47d99d23d44e2cbb939777186846f74af55f682714\",\n    \"exceptional_channel_independence_receipt.json\": \"77ae0f635a68c1fff47636b11b78e8c45b711c86da64402f33c94c0cd40187c8\",\n    \"general_bautin_bound_receipt.json\": \"e34cdf518d576404885a9553642aa1b53082486694019e4f45017b66e1ce599a\",\n    \"package_mutation_receipt.json\": \"91a3776dd878e64efde800a4a16df42dd368ba38c0d4a48cfd18e6f14bff96f0\",\n    \"power_bautin_uniform_receipt.json\": \"369c56676262234351ed846294c82a02f452b6387d177676271378dec74bc988\",\n    \"standalone_weighted_order_receipt.json\": \"584ecd7ec00a99d3027939dc52a2b2d5dc4a619e15e9fb91b4da63faa31678f6\",\n    \"support_rank_reconstruction_receipt.json\": \"2b7300dc5128b5299f3321e3ce181b7af034db17b81e0e64bad60a5e395f0913\"\n  },\n  \"exact_release_root_verified\": true,\n  \"manifest_entry_count\": 72,\n  \"manifest_sha256\": \"699e07bf26cfbc4d4c4f6a9ed21cb3bee3b543d5a331d3fbecdc4d4301b4c186\",\n  \"package_allowlist_verified\": true,\n  \"receipt_sha256\": \"78ead1b1886039a5b7036a6bcd35ef0a54f4d2312918d14562dd8585fc816812\",\n  \"replay_requested\": false,\n  \"replays\": [],\n  \"schema\": \"cyclicity-open-problems-candidate-integrity-v1\",\n  \"status\": \"pass\"\n}\n",
+      "startedAt": "2026-08-28T11:32:14.547Z",
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "python3",
+        "-O",
+        "check_candidate_package.py",
+        "--root",
+        ".",
+        "--exact-root"
+      ],
+      "completedAt": "2026-08-28T11:32:14.721Z",
+      "exitCode": 0,
+      "id": "package-semantic-optimized",
+      "outputSha256": "997a3be4caa9c1f2f5d72ec03ca9c3db3dc43a5bdbadc8295ec901f55736e132",
+      "outputTail": "{\n  \"artifact_comparison_count\": 0,\n  \"claim_boundary\": {\n    \"established\": \"exact package-member identity, internal receipt integrity, and claim-boundary presence\",\n    \"not_established\": [\n      \"byte-identical computational replay was not requested or executed in this run\",\n      \"independent validity of the reconstructed support theorem\",\n      \"historical novelty or priority\",\n      \"independent review, peer review, or publication readiness\",\n      \"independent status for any simulated referee report\",\n      \"authorization to publish or deploy\"\n    ]\n  },\n  \"command_execution_count\": 0,\n  \"embedded_receipt_digests\": {\n    \"amplitude_order_oracle_receipt.json\": \"f70eb6ba7895a83bc18caaf70c459d511eaa60380dacf644d80d5edbba10f625\",\n    \"bautin_content_bridge_receipt.json\": \"a60711a4ec7337ee0d2cb03ee858858d0e60a33a2efb42bfb1b551a3b5d6aa09\",\n    \"dickson_amplitude_receipt.json\": \"47384322b1b27ac1c40abf9d8ac35c88c590f1b2049d80372e4ec56519c12103\",\n    \"exceptional_amplitude_receipt.json\": \"5f5db74d46fcc6f0fa4d2d47d99d23d44e2cbb939777186846f74af55f682714\",\n    \"exceptional_channel_independence_receipt.json\": \"77ae0f635a68c1fff47636b11b78e8c45b711c86da64402f33c94c0cd40187c8\",\n    \"general_bautin_bound_receipt.json\": \"e34cdf518d576404885a9553642aa1b53082486694019e4f45017b66e1ce599a\",\n    \"package_mutation_receipt.json\": \"91a3776dd878e64efde800a4a16df42dd368ba38c0d4a48cfd18e6f14bff96f0\",\n    \"power_bautin_uniform_receipt.json\": \"369c56676262234351ed846294c82a02f452b6387d177676271378dec74bc988\",\n    \"standalone_weighted_order_receipt.json\": \"584ecd7ec00a99d3027939dc52a2b2d5dc4a619e15e9fb91b4da63faa31678f6\",\n    \"support_rank_reconstruction_receipt.json\": \"2b7300dc5128b5299f3321e3ce181b7af034db17b81e0e64bad60a5e395f0913\"\n  },\n  \"exact_release_root_verified\": true,\n  \"manifest_entry_count\": 72,\n  \"manifest_sha256\": \"699e07bf26cfbc4d4c4f6a9ed21cb3bee3b543d5a331d3fbecdc4d4301b4c186\",\n  \"package_allowlist_verified\": true,\n  \"receipt_sha256\": \"78ead1b1886039a5b7036a6bcd35ef0a54f4d2312918d14562dd8585fc816812\",\n  \"replay_requested\": false,\n  \"replays\": [],\n  \"schema\": \"cyclicity-open-problems-candidate-integrity-v1\",\n  \"status\": \"pass\"\n}\n",
+      "startedAt": "2026-08-28T11:32:14.637Z",
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "jq",
+        "-e",
+        ".status == \"pass\" and .replay_requested == true and .manifest_sha256 == \"699e07bf26cfbc4d4c4f6a9ed21cb3bee3b543d5a331d3fbecdc4d4301b4c186\" and .command_execution_count == 13 and .artifact_comparison_count == 14 and .package_allowlist_verified == true and .exact_release_root_verified == true and .receipt_sha256 == \"926b77cef970d241b91b3cbecb103a6fa04ddaeb92b87a1bda7e411614310d64\" and ([.replays[].byte_identical] | all)",
+        "PACKAGE_INTEGRITY_RECEIPT.json"
+      ],
+      "completedAt": "2026-08-28T11:32:14.729Z",
+      "exitCode": 0,
+      "id": "stored-replay-receipt",
+      "outputSha256": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74",
+      "outputTail": "true\n",
+      "startedAt": "2026-08-28T11:32:14.722Z",
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "jq",
+        "-e",
+        "(.sources | length) == 24 and ([.sources[] | .authorization_status == \"AUTHORIZED_REFERENCE_ONLY_NOT_REDISTRIBUTED\"] | all) and ([.sources[].source_id] | length == (unique | length))",
+        "SOURCE_PROVENANCE.json"
+      ],
+      "completedAt": "2026-08-28T11:32:14.734Z",
+      "exitCode": 0,
+      "id": "source-provenance",
+      "outputSha256": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74",
+      "outputTail": "true\n",
+      "startedAt": "2026-08-28T11:32:14.730Z",
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "jq",
+        "-e",
+        ".decision == \"MAJOR_REVISION_HOLD_FOR_REPAIR\" and .repair_status == \"implementation_complete_pending_rebuild_and_preflight\" and .assurance_class == \"internal_model_mediated_editorial_review\" and (.panel | length) == 5 and .confirmation.status == \"pending\"",
+        "EDITORIAL_DISPOSITION.json"
+      ],
+      "completedAt": "2026-08-28T11:32:14.737Z",
+      "exitCode": 0,
+      "id": "editorial-disposition",
+      "outputSha256": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74",
+      "outputTail": "true\n",
+      "startedAt": "2026-08-28T11:32:14.734Z",
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "qpdf",
+        "--check",
+        "CANDIDATE_PREPRINT.pdf"
+      ],
+      "completedAt": "2026-08-28T11:32:14.762Z",
+      "exitCode": 0,
+      "id": "pdf-structure",
+      "outputSha256": "df08cafae35562ccc9023bce0c1177c314a8880fcf7fe76dd09120d2041b1094",
+      "outputTail": "checking CANDIDATE_PREPRINT.pdf\nPDF Version: 1.7\nFile is not encrypted\nFile is not linearized\nNo syntax or stream encoding errors found; the file may still contain\nerrors that qpdf cannot detect\n",
+      "startedAt": "2026-08-28T11:32:14.738Z",
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "pdfinfo",
+        "CANDIDATE_PREPRINT.pdf"
+      ],
+      "completedAt": "2026-08-28T11:32:14.790Z",
+      "exitCode": 0,
+      "id": "pdf-metadata",
+      "outputSha256": "ea98aade40c17b8e705c08be5477a64d5f38ec36f0575311a6b34df69a9c4e76",
+      "outputTail": "Title:           Amplitude modules, fused support, and a coefficient-Bautin bound for polynomial phases\nSubject:         Unrefereed theorem candidate\nKeywords:        polynomial exponential periods, twisted de Rham modules, inverse support, Dickson polynomials, zero-cycles, Bautin ideals\nAuthor:          Anonymous\nCreator:         LaTeX via pandoc\nProducer:        pdfTeX-1.40.29\nCreationDate:    Fri Aug 28 01:00:00 2026 BST\nModDate:         Fri Aug 28 01:00:00 2026 BST\nCustom Metadata: yes\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           23\nEncrypted:       no\nPage size:       595.276 x 841.89 pts (A4)\nPage rot:        0\nFile size:       469345 bytes\nOptimized:       no\nPDF version:     1.7\n",
+      "startedAt": "2026-08-28T11:32:14.762Z",
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "shasum",
+        "-a",
+        "256",
+        "PACKAGE_MANIFEST.json",
+        "CANDIDATE_PREPRINT.pdf",
+        "PACKAGE_INTEGRITY_RECEIPT.json"
+      ],
+      "completedAt": "2026-08-28T11:32:14.805Z",
+      "exitCode": 0,
+      "id": "release-hashes",
+      "outputSha256": "fdaf2be88e0dc586698f9bb5d0bd2eec1ef351d7430d38bf9ad7a89a930405f9",
+      "outputTail": "699e07bf26cfbc4d4c4f6a9ed21cb3bee3b543d5a331d3fbecdc4d4301b4c186  PACKAGE_MANIFEST.json\n5a4c00f34873e9a0c691ce375a40f78449b671b9fe2bdfcfe1ea7deead4ebb99  CANDIDATE_PREPRINT.pdf\n979e976b1f57220d86cdc56ae7334bf5755ea5b64308870d085f987ec93b10a0  PACKAGE_INTEGRITY_RECEIPT.json\n",
+      "startedAt": "2026-08-28T11:32:14.790Z",
+      "status": "passed"
+    }
+  ],
+  "completedAt": "2026-08-28T11:32:14.805Z",
+  "cwd": "/Users/admin/Codex/policy-identification-observatory/work/publication/amplitude-modules-research-package-v0.1.0-candidate-r2c",
+  "gitHead": "52504ae815f61841325c6cda3b414d69dd55c702",
+  "plan": "amplitude-modules-r2-publication-ready-preflight",
+  "planSha256": "10c7c449fbd6f865166c23a888da4b6eaebb4747a779dc3a189c6effb5044920",
+  "schemaVersion": "1.0",
+  "startedAt": "2026-08-28T11:32:14.546Z",
+  "status": "passed"
+}

@@ -26,7 +26,7 @@ temporary_path=$(mktemp "$output_dir/.accessible-preprint.XXXXXX.html")
 trap 'rm -f "$temporary_path"' EXIT HUP INT TERM
 
 pandoc "$source_path" \
-  --from=gfm+tex_math_dollars \
+  --from=markdown+tex_math_single_backslash+tex_math_double_backslash \
   --to=html5 \
   --standalone \
   --toc \
@@ -42,4 +42,3 @@ pandoc "$source_path" \
 
 mv "$temporary_path" "$output_path"
 trap - EXIT HUP INT TERM
-
