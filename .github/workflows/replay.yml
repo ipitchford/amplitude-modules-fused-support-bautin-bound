@@ -1,0 +1,44 @@
+name: package-integrity
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-package:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        optimize: [ordinary, optimized]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Validate exact package semantics
+        shell: bash
+        run: |
+          if [ "${{ matrix.optimize }}" = "optimized" ]; then
+            python -O scientific-package/check_candidate_package.py --root scientific-package --exact-root
+          else
+            python scientific-package/check_candidate_package.py --root scientific-package --exact-root
+          fi
+
+  retained-junit-parity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Verify retained ordinary and optimized inventories
+        run: >-
+          python tools/verify_junit_parity.py
+          --ordinary evidence/junit/ordinary.xml
+          --optimized evidence/junit/optimized.xml
+          --target-sha aa1e73f62ccb89bae6ff00aaee844721172eca515d4da64c4c41539e51977b13
+          --recorded-at 2026-08-28T11:44:26Z
+          --output ${{ runner.temp }}/junit-parity.json

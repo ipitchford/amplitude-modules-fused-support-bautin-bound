@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this anonymous unrefereed candidate, cite the versioned record."
+title: "Amplitude modules, fused support, and a coefficient-Bautin bound for polynomial phases"
+type: article
+authors:
+  - family-names: "Anonymous"
+version: "0.1.0-candidate"
+date-released: 2026-08-28
+license: CC0-1.0
+repository-code: "https://github.com/ipitchford/amplitude-modules-fused-support-bautin-bound"
+keywords:
+  - polynomial phases
+  - cyclicity
+  - monodromy
+  - Bautin ideal
+  - zero cycles

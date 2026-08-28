@@ -1,0 +1,145 @@
+{
+  "claim_boundary": {
+    "established_by_exact_finite_checks": [
+      "generic quotient multiplication matrices with deg(g)>deg(f) in the declared symbolic degrees",
+      "Cayley--Hamilton identities in those degrees",
+      "cyclic averaging of generic zero-sum cycles through the declared degree"
+    ],
+    "not_established": [
+      "sharpness for integer-weighted cycles in every degree",
+      "novelty, independent review, peer review, or publication readiness"
+    ],
+    "requires_written_proof": [
+      "the all-degree quotient-ring argument",
+      "the basis-independent content-ideal argument",
+      "the all-order Melnikov identity",
+      "injectivity of every positive t-derivative on zero-cycle polynomial integrals"
+    ]
+  },
+  "cycle_average_checks": [
+    {
+      "all_averaged_cycle_coordinates_zero": true,
+      "degree": 2,
+      "rotation_count": 2,
+      "zero_sum_substitution": "n_1=-sum(n_0,...,n_0)"
+    },
+    {
+      "all_averaged_cycle_coordinates_zero": true,
+      "degree": 3,
+      "rotation_count": 3,
+      "zero_sum_substitution": "n_2=-sum(n_0,...,n_1)"
+    },
+    {
+      "all_averaged_cycle_coordinates_zero": true,
+      "degree": 4,
+      "rotation_count": 4,
+      "zero_sum_substitution": "n_3=-sum(n_0,...,n_2)"
+    },
+    {
+      "all_averaged_cycle_coordinates_zero": true,
+      "degree": 5,
+      "rotation_count": 5,
+      "zero_sum_substitution": "n_4=-sum(n_0,...,n_3)"
+    },
+    {
+      "all_averaged_cycle_coordinates_zero": true,
+      "degree": 6,
+      "rotation_count": 6,
+      "zero_sum_substitution": "n_5=-sum(n_0,...,n_4)"
+    },
+    {
+      "all_averaged_cycle_coordinates_zero": true,
+      "degree": 7,
+      "rotation_count": 7,
+      "zero_sum_substitution": "n_6=-sum(n_0,...,n_5)"
+    },
+    {
+      "all_averaged_cycle_coordinates_zero": true,
+      "degree": 8,
+      "rotation_count": 8,
+      "zero_sum_substitution": "n_7=-sum(n_0,...,n_6)"
+    },
+    {
+      "all_averaged_cycle_coordinates_zero": true,
+      "degree": 9,
+      "rotation_count": 9,
+      "zero_sum_substitution": "n_8=-sum(n_0,...,n_7)"
+    },
+    {
+      "all_averaged_cycle_coordinates_zero": true,
+      "degree": 10,
+      "rotation_count": 10,
+      "zero_sum_substitution": "n_9=-sum(n_0,...,n_8)"
+    },
+    {
+      "all_averaged_cycle_coordinates_zero": true,
+      "degree": 11,
+      "rotation_count": 11,
+      "zero_sum_substitution": "n_10=-sum(n_0,...,n_9)"
+    },
+    {
+      "all_averaged_cycle_coordinates_zero": true,
+      "degree": 12,
+      "rotation_count": 12,
+      "zero_sum_substitution": "n_11=-sum(n_0,...,n_10)"
+    }
+  ],
+  "generic_quotient_checks": [
+    {
+      "cayley_hamilton_residual_is_zero": true,
+      "characteristic_coefficients": [
+        {
+          "characteristic_index": 1,
+          "coefficient_sha256": "ce097efa3d35a49d4d742122a3c6bf2e28f943a788fc4161558e8f656c5dbd9a",
+          "t_degree": 2
+        },
+        {
+          "characteristic_index": 2,
+          "coefficient_sha256": "78bdb644f3841aa2aa6d3990379b20d0416c24d7606ed28e44ef71d843d77872",
+          "t_degree": 4
+        }
+      ],
+      "degree": 2,
+      "maximum_matrix_entry_t_degree": 2,
+      "multiplication_matrix_sha256": "4491e35d90910e303b95d45d7f383f3ee8616c455c9aa625df3b7a332553f706",
+      "perturbation_degree": 4,
+      "perturbation_parameter_count": 5,
+      "phase_parameter_count": 2
+    },
+    {
+      "cayley_hamilton_residual_is_zero": true,
+      "characteristic_coefficients": [
+        {
+          "characteristic_index": 1,
+          "coefficient_sha256": "cf0889c393c0c99a92dc0b8f9d5e97566ab586a7c826b2c0aa79da5f7b52e8fb",
+          "t_degree": 1
+        },
+        {
+          "characteristic_index": 2,
+          "coefficient_sha256": "dec949883cc61c9793fa285b9f55e01d2e30feae363da36b993cc817598e439d",
+          "t_degree": 3
+        },
+        {
+          "characteristic_index": 3,
+          "coefficient_sha256": "aef443603e47e3e2df631668d7f80dc5fdb5eb0d125054017136d5a6cf1bb7d7",
+          "t_degree": 5
+        }
+      ],
+      "degree": 3,
+      "maximum_matrix_entry_t_degree": 2,
+      "multiplication_matrix_sha256": "2159d7ef05a1ed80a5f7ce07baf22b84dd591ca5348df749204dd416b3b46d24",
+      "perturbation_degree": 5,
+      "perturbation_parameter_count": 6,
+      "phase_parameter_count": 3
+    }
+  ],
+  "receipt_sha256": "e34cdf518d576404885a9553642aa1b53082486694019e4f45017b66e1ce599a",
+  "schema": "general-zero-cycle-bautin-bound-falsification-v2",
+  "scope": {
+    "candidate_bound": "ordinary coefficient Bautin ideal stabilizes by d-1",
+    "cycle": "arbitrary zero-cycle of f",
+    "perturbation": "g of arbitrary fixed finite degree",
+    "phase": "monic f of degree d"
+  },
+  "status": "pass"
+}

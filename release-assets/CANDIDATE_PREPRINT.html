@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="Anonymous unrefereed theorem candidate with deterministic internal replay; no independent specialist review or submission." />
+  <title>Amplitude modules, fused support, and a coefficient-Bautin
+bound for polynomial phases</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+    :root { color-scheme: light dark; }
+    html { font-family: Georgia, "Times New Roman", serif; line-height: 1.55; }
+    body { margin: 0 auto; max-width: 78rem; padding: 1.5rem; }
+    main { max-width: 72ch; }
+    h1, h2, h3, h4 { line-height: 1.2; }
+    a { text-underline-offset: 0.15em; }
+    nav#TOC { border-block: 1px solid currentColor; margin-block: 1.5rem; padding-block: 1rem; }
+    .skip-link { background: Canvas; left: 0.5rem; padding: 0.75rem; position: absolute; top: -5rem; z-index: 100; }
+    .skip-link:focus { top: 0.5rem; }
+    .candidate-status { border: 0.18rem solid #a15c00; margin-block: 1rem 2rem; padding: 1rem; }
+    .candidate-status strong { display: block; font-family: system-ui, sans-serif; margin-bottom: 0.35rem; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    pre { overflow-x: auto; padding: 0.75rem; }
+    table { border-collapse: collapse; display: block; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid currentColor; padding: 0.4rem 0.55rem; text-align: left; vertical-align: top; }
+    math[display="block"] { margin-block: 1rem; overflow-x: auto; }
+    @media (prefers-color-scheme: dark) { .candidate-status { border-color: #ffb45c; } }
+    @media print { .skip-link { display: none; } body { max-width: none; } }
+  </style>
+
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to manuscript</a>
+<main id="main-content">
+<aside class="candidate-status" role="note" aria-label="Publication and assurance status">
+  <strong>Anonymous unrefereed theorem candidate</strong>
+  This candidate has deterministic internal replay but has not received independent specialist review, journal peer review, or submission. It does not claim that three historically posed open problems have been solved.
+</aside>
+
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a
+href="#amplitude-modules-fused-support-and-a-coefficient-bautin-bound-for-polynomial-phases"
+id="toc-amplitude-modules-fused-support-and-a-coefficient-bautin-bound-for-polynomial-phases">Amplitude
+modules, fused support, and a coefficient-Bautin bound for polynomial
+phases</a>
+<ul>
+<li><a href="#abstract" id="toc-abstract">Abstract</a></li>
+<li><a href="#1-introduction" id="toc-1-introduction">1.
+Introduction</a>
+<ul>
+<li><a href="#11-main-results" id="toc-11-main-results">1.1. Main
+results</a></li>
+<li><a href="#12-prior-art-boundary" id="toc-12-prior-art-boundary">1.2.
+Prior-art boundary</a></li>
+<li><a href="#13-theorem-level-dependency-and-prior-art-map"
+id="toc-13-theorem-level-dependency-and-prior-art-map">1.3.
+Theorem-level dependency and prior-art map</a></li>
+</ul></li>
+<li><a href="#2-the-reconstructed-support-theorem"
+id="toc-2-the-reconstructed-support-theorem">2. The reconstructed
+support theorem</a>
+<ul>
+<li><a href="#21-general-monodromy-blocks"
+id="toc-21-general-monodromy-blocks">2.1. General monodromy
+blocks</a></li>
+</ul></li>
+<li><a href="#3-dickson-amplitude-modules"
+id="toc-3-dickson-amplitude-modules">3. Dickson amplitude modules</a>
+<ul>
+<li><a href="#31-the-module-decomposition"
+id="toc-31-the-module-decomposition">3.1. The module
+decomposition</a></li>
+<li><a href="#32-quadratic-obstruction-to-channel-loss"
+id="toc-32-quadratic-obstruction-to-channel-loss">3.2. Quadratic
+obstruction to channel loss</a></li>
+</ul></li>
+<li><a href="#4-the-exceptional-ritt-amplitude-module"
+id="toc-4-the-exceptional-ritt-amplitude-module">4. The exceptional Ritt
+amplitude module</a>
+<ul>
+<li><a href="#41-direct-decomposition"
+id="toc-41-direct-decomposition">4.1. Direct decomposition</a></li>
+<li><a href="#42-the-quartic-root-module"
+id="toc-42-the-quartic-root-module">4.2. The quartic root
+module</a></li>
+<li><a href="#43-fusion-to-degree-twelve"
+id="toc-43-fusion-to-degree-twelve">4.3. Fusion to degree
+twelve</a></li>
+</ul></li>
+<li><a href="#5-support-predicted-weighted-period-operators"
+id="toc-5-support-predicted-weighted-period-operators">5.
+Support-predicted weighted period operators</a>
+<ul>
+<li><a href="#51-exact-reduction" id="toc-51-exact-reduction">5.1. Exact
+reduction</a></li>
+<li><a href="#52-operator-and-exact-witness"
+id="toc-52-operator-and-exact-witness">5.2. Operator and exact
+witness</a></li>
+<li><a href="#53-a-corrected-cycle-specific-refinement"
+id="toc-53-a-corrected-cycle-specific-refinement">5.3. A corrected
+cycle-specific refinement</a></li>
+</ul></li>
+<li><a href="#6-the-uniform-zero-cycle-bautin-bound"
+id="toc-6-the-uniform-zero-cycle-bautin-bound">6. The uniform zero-cycle
+Bautin bound</a>
+<ul>
+<li><a href="#61-all-order-melnikov-identity"
+id="toc-61-all-order-melnikov-identity">6.1. All-order Melnikov
+identity</a></li>
+<li><a href="#62-monodromy-injectivity"
+id="toc-62-monodromy-injectivity">6.2. Monodromy injectivity</a></li>
+<li><a href="#63-cayley--hamilton-recurrence"
+id="toc-63-cayley--hamilton-recurrence">6.3. Cayley--Hamilton
+recurrence</a></li>
+<li><a href="#64-sharpness-and-convention-boundary"
+id="toc-64-sharpness-and-convention-boundary">6.4. Sharpness and
+convention boundary</a></li>
+</ul></li>
+<li><a href="#7-exact-computational-evidence"
+id="toc-7-exact-computational-evidence">7. Exact computational
+evidence</a>
+<ul>
+<li><a href="#71-atlas-independent-supportrank-reconstruction"
+id="toc-71-atlas-independent-supportrank-reconstruction">7.1.
+Atlas-independent support/rank reconstruction</a></li>
+<li><a href="#72-dickson-battery" id="toc-72-dickson-battery">7.2.
+Dickson battery</a></li>
+<li><a href="#73-exceptional-battery"
+id="toc-73-exceptional-battery">7.3. Exceptional battery</a></li>
+<li><a href="#74-weighted-operator-reconstruction"
+id="toc-74-weighted-operator-reconstruction">7.4. Weighted operator
+reconstruction</a></li>
+<li><a href="#75-bautin-bound-checks"
+id="toc-75-bautin-bound-checks">7.5. Bautin-bound checks</a></li>
+<li><a href="#76-package-negative-controls"
+id="toc-76-package-negative-controls">7.6. Package negative
+controls</a></li>
+</ul></li>
+<li><a href="#8-discussion" id="toc-8-discussion">8. Discussion</a>
+<ul>
+<li><a href="#81-why-raw-channel-count-is-not-individual-period-order"
+id="toc-81-why-raw-channel-count-is-not-individual-period-order">8.1.
+Why raw channel count is not individual-period order</a></li>
+</ul></li>
+<li><a href="#9-limitations-and-open-obligations"
+id="toc-9-limitations-and-open-obligations">9. Limitations and open
+obligations</a></li>
+<li><a href="#10-reproducibility-and-data-availability"
+id="toc-10-reproducibility-and-data-availability">10. Reproducibility
+and data availability</a></li>
+<li><a href="#11-ethics-statement" id="toc-11-ethics-statement">11.
+Ethics statement</a></li>
+<li><a href="#references" id="toc-references">References</a></li>
+<li><a href="#appendix-a-binomial-laurent-moments"
+id="toc-appendix-a-binomial-laurent-moments">Appendix A. Binomial
+Laurent moments</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1
+id="amplitude-modules-fused-support-and-a-coefficient-bautin-bound-for-polynomial-phases">Amplitude
+modules, fused support, and a coefficient-Bautin bound for polynomial
+phases</h1>
+<p><strong>Candidate research manuscript — 28 August 2026</strong><br />
+<strong>Candidate version:</strong> 2026-08-28-r2<br />
+<strong>Author:</strong> Anonymous<br />
+<strong>Status:</strong> theorem candidate with deterministic internal
+replay, but no independent specialist review or submission<br />
+<strong>Artifact identity:</strong> bound by
+<code>PACKAGE_MANIFEST.json</code>; public archive identifier, DOI,
+licence and release URL are pending publisher packaging</p>
+<h2 id="abstract">Abstract</h2>
+<p>We formulate two Atlas-derived amplitude-classification theorem
+candidates and one externally motivated ordinary coefficient-Bautin
+theorem candidate. We first reconstruct the load-bearing
+polynomial-amplitude identity from the <em>Cyclicity Support-Fusion
+Atlas</em> [14] self-containedly: a formal moment transform identifies
+the twisted quotient with distinct Kummer channels, a corrected
+falling-factorial Vandermonde argument computes cyclic rank, and Fourier
+inversion identifies the same channels with primitive root values. We
+then derive a general monodromy-block decomposition: central monodromy
+projectors descend to free polynomial modules, and every nonzero block
+component activates its entire Fourier-character block. For every
+nondegenerate Dickson phase (D_d(x,a)), meaning (a\ne0), we then give a
+free (\mathbf C[D_d])-module decomposition of arbitrary polynomial
+primitives and prove the exact rank formula (q=2N+\varepsilon). This
+yields a parity classification: odd degree realizes precisely the even
+ranks, while even degree realizes every rank. Second, for the
+exceptional Ritt collision (P=(x^4+x)^3), we exhibit three explicit
+fused amplitude modules and prove that every nonzero element of each
+activates exactly three channels. Together with the two composition
+channels, these modules partition all eleven non-trace residues and
+realize every rank. Third, for every degree-(d) polynomial phase, every
+zero-cycle, and polynomial perturbations of arbitrary fixed degree, we
+prove that the ordinary coefficient Bautin ideal of the zero-cycle
+displacement is generated by Melnikov orders one through (d-1). The
+proof combines an all-order Lagrange--Bürmann identity, injectivity of
+differentiation on zero-cycle polynomial integrals, and a
+Cayley--Hamilton recurrence. Writing (b_{\mathrm{coeff}}(m)) for this
+explicit ordinary coefficient index, we obtain (b_{\mathrm{coeff}}(m)\le
+m-1). If the terse index (b(m)) in [17] is intended in this coefficient
+sense, then the same bound answers its Problem 8.4. The (d-1) cutoff is
+sharp on the complexified cycle module. For integral cycles we prove
+only the lower witness (d/p), where (p) is the least prime divisor of
+(d). As supporting infrastructure, we also identify Atlas support with
+the minimal order of an operator annihilating the complete rapid-decay
+period system and retain corrected cycle-specific block bounds. Exact
+finite checks support the algebraic arguments but are not substitutes
+for proof.</p>
+<h2 id="1-introduction">1. Introduction</h2>
+<p>Let (P\in\mathbf C[x]) be a polynomial phase, let (A\in\mathbf C[x])
+be an amplitude, and consider rapid-decay exponential periods</p>
+<p>[ I_{\Gamma,A}(s)=\int_\Gamma A(x)e^{sP(x)},dx. ]</p>
+<p>The number and structure of independent channels activated by (A)
+govern both the geometry of the primitive (G), where (G'=A), and the
+differential equations satisfied by the complete period system. The
+Cyclicity Support-Fusion Atlas [14] proposes a particularly sharp
+bridge: cyclic rank equals the number of non-trace inverse-series
+residues and also the reduced span of the primitive values on a generic
+fibre. Section 2 reconstructs that bridge as a theorem within this
+manuscript rather than importing it as a premise.</p>
+<p>The Atlas leaves an open direction around classification by induced
+rank, support fusion and period order. Problems A and B below are two
+explicit amplitude-classification subproblems of that Atlas direction.
+Problem C is instead an ordinary coefficient-Bautin theorem candidate
+motivated by the externally posed Problem 8.4 of [17]. The period-order
+construction is supporting infrastructure, not a fourth headline
+claim.</p>
+<p><strong>Problem A.</strong> Classify the cyclic rank of every
+polynomial amplitude for the nondegenerate Dickson phase (D_d(x,a)),
+with (a\ne0), uniformly in degree and parameter.</p>
+<p><strong>Problem B.</strong> Classify every polynomial amplitude for
+the degree-twelve exceptional Ritt collision (P=(x^4+x)^3), including
+hidden cancellation inside the fused blocks.</p>
+<p><strong>Problem C.</strong> For phases and perturbations of degree at
+most (m), and every zero-cycle of the phase, bound the ordinary
+coefficient Bautin index of the displacement uniformly in the phase,
+perturbation and cycle.</p>
+<p><strong>Support-to-order bridge.</strong> Given arbitrary
+(P,A\in\mathbf Q[x]), compute a primitive scalar operator for every
+rapid-decay period, prove its complete-system minimal order, predict
+that order from inverse support, and bound the order for a specified
+ray-cycle.</p>
+<p>Our answers have a common pattern. We first identify the active
+inverse residues with the cyclic summands of the twisted de Rham
+quotient. We then use monodromy and explicit polynomial modules to
+classify those residues in the two structured families, use exact
+quotient reduction to construct the period operator, and use a second
+quotient algebra to control all Melnikov orders. The reconstructed
+support proof follows the Atlas proof architecture and was produced by
+the same research system, so it is self-contained but not an independent
+validation of the Atlas.</p>
+<p>The organizing principle is finite-fibre algebra. On the
+exponential-period side, the rank-((d-1)) twisted de Rham quotient turns
+the infinite sequence ([A,dx],[PA,dx],\ldots) into a finite
+cyclic-module problem. On the zero-cycle side, the rank-(d) algebra
+(R[t,x]/(f-t)) turns the infinite power-moment sequence into a finite
+characteristic recurrence. Monodromy then supplies the missing
+information: Fourier support in the first quotient and injectivity of
+differentiation in the second. The two constructions are different
+instances of the same finite-cover mechanism rather than unrelated
+applications.</p>
+<h3 id="11-main-results">1.1. Main results</h3>
+<p>For an arbitrary degree-(d) phase, the inertia (d)-cycle has simple
+Fourier spectrum. The monodromy permutation module is therefore
+multiplicity-free and splits into character blocks. Using the
+reconstructed root-span/support equality, central projectors descend to
+free (\mathbf C[P])-modules, and the attainable supports are exactly the
+unions of these blocks. This supplies the organizing principle for the
+two explicit classifications below.</p>
+<p>For (a\ne0), every primitive has a unique Dickson expansion in paired
+modules. Each nonzero pair activates both conjugate residue channels,
+because losing either would force a nonsplit quadratic element into the
+rational base field. This proves</p>
+<p>[ q(D_d,G',dx)=2N(G)+\varepsilon(G). ]</p>
+<p>For (Q=x^4+x) and (P=Q^3), we construct three rank-three modules</p>
+<p>[ \begin{aligned} M_0&amp;=\langle x,\ x^7+\tfrac74x^4,\
+x^{10}-\tfrac52x^4\rangle,\ M_1&amp;=\langle x^2,\ x^5,\
+x^{11}+\tfrac{11}{4}x^8\rangle,\ M_2&amp;=\langle x^3,\ x^6,\
+x^9\rangle. \end{aligned} ]</p>
+<p>The quartic has monodromy (S_4), whose reduced permutation
+representation is irreducible. This forces all three non-trace quartic
+channels. A fibre-trace lemma then removes the additional quartic trace
+channel after composition, while a modulo-three grading fuses the
+surviving channels into three explicit blocks modulo twelve.</p>
+<p>For the third result, let</p>
+<p>[ \Delta_C(t,\epsilon;\boldsymbol a) =\sum_{\mu\ge1}\epsilon^\mu
+M_\mu(t;\boldsymbol a) ]</p>
+<p>be the displacement of a zero-cycle under a generic polynomial
+perturbation (g_{\boldsymbol a}) of arbitrary fixed degree. Parameter
+content is the ideal generated by the polynomial coefficients of an
+algebraic function when expanded in any complex basis of its finite
+coefficient span. If (\mathcal B_k) is generated by the contents of
+(M_1,\ldots,M_k), then</p>
+<p>[ \mathcal B_\infty=\mathcal B_{d-1}. ]</p>
+<p>Differentiation is injective on the vector space of zero-cycle
+polynomial integrals: a differentiated integral in the kernel would be a
+single-valued polynomial in (t), and averaging its infinity-monodromy
+orbit annihilates the zero-cycle. Hence differentiation preserves
+parameter content exactly. Cayley--Hamilton for multiplication by (g) in
+the rank-(d) algebra (R[t,x]/(f-t)) then shows that no power moment, and
+therefore no Melnikov coefficient, introduces a generator beyond order
+(d-1). In particular, (b_{\mathrm{coeff}}(m)\le m-1).</p>
+<p>As a supporting bridge, the first dependence among</p>
+<p>[ [A,dx],[PA,dx],[P^2A,dx],\ldots ]</p>
+<p>in the twisted quotient produces an operator annihilating every
+rapid-decay period. Using the reconstructed theorem and Hien's perfect
+pairing between algebraic de Rham cohomology and rapid-decay homology,
+its minimal complete-system order is</p>
+<p>[ |\Sigma(P;G)| =\dim\operatorname{span}_{\mathrm{red}}{G(x_i)}.
+]</p>
+<p>For a ray-cycle whose Fourier transform touches the channel set (R),
+the individual order lies between (|R|) and the total mass of the
+monodromy blocks meeting (R). Full contact or differential-module
+irreducibility makes the appropriate bound sharp. This is a qualified
+individual-cycle statement, not the blanket channel-count formula
+rejected below and not the third headline claim.</p>
+<h3 id="12-prior-art-boundary">1.2. Prior-art boundary</h3>
+<p>Puiseux expansions of (Q(P_i^{-1})), Fourier support separation,
+monodromy subspaces and zero-dimensional Abelian integrals are
+established in Pakovich--Muzychuk [1], Alvarez Sanchez--Bravo
+Trinidad--Mardesic [2], and Gavrilov--Pakovich [3]. Pakovich's
+fixed-segment Chebyshev moment theorem [13] gives a Chebyshev-derivative
+basis for the amplitudes whose moments all vanish; it is a close
+structural antecedent but does not state the cyclic rank of every
+amplitude for the complete rapid-decay period system. Individual
+Chebyshev/Lucas amplitudes in exponential integrals and their Bessel or
+Airy--Lucas equations occur in [4,5].</p>
+<p>Pakovich--Muzychuk [1] also classify invariant subspaces of a
+polynomial monodromy group containing a full cycle. The
+representation-theoretic block decomposition in Section 2.1 is therefore
+not claimed as new. The residual steps used here are the descent of
+central projectors to polynomial (\mathbf C[P])-lattices, realization of
+every nonzero lattice component as the full inverse-support character
+block, and the resulting all-amplitude rank formulas.</p>
+<p>The exact phase ((x^4+x)^3) is already identified as a Ritt collision
+with monodromy (S_4\times C_3) by Behajaina--Konig--Neftin [6, Theorems
+2.2(1) and 2.3(1)]. Our residual candidate contribution in Problem B is
+therefore the amplitude-module/support classification and all-amplitude
+rank formula, not the collision or its monodromy group.</p>
+<p>Minimal hyperexponential telescopers from first reduced dependence
+are prior art [7], as are order-aware and reduction-based
+creative-telescoping methods [8,9]. Rapid-decay period representations
+for exponential Gauss--Manin systems are also established [10], and Hien
+proves the required perfect period pairing [12, Theorem 5.2]. The
+support-to-order bridge is presented only as the Atlas-specific identity
+and an exact benchmark.</p>
+<p>Bravo--Mardešić--Novikov--Pontigo-Herrera [17] ask for a
+degree-uniform zero-cycle Bautin bound. Under the ordinary
+Taylor-coefficient reading of their ideal chain, Proposition 6.1
+identifies that coefficient ideal with the parameter-content ideal used
+here and Problem C gives (b_{\mathrm{coeff}}(m)\le m-1). If [17] intends
+its terse (b(m)) in this sense, then (b(m)=b_{\mathrm{coeff}}(m)).
+Batenkov--Yomdin [18] define ordinary Bautin ideals by Taylor
+coefficients and prove a general Bautin-ideal theorem for polynomial
+recurrences, while Briskin--Yomdin [19] treat algebraic families of
+analytic functions. These are close antecedents. The residual step here
+is to prove that the order-dependent differentiation taking power
+moments to Melnikov coefficients preserves parameter content on a
+zero-cycle. The source [17] does not specify a different localization,
+radicalization, or analytic-parameter ideal; none of those alternatives
+is claimed here. The bounded search found no exact statement of the
+(d-1) bound, but does not establish priority.</p>
+<p>The broader block theorem, the cycle-by-cycle order question and the
+binomial Laurent specialization were also tested during development. The
+manuscript gives self-contained arguments for its principal retained
+candidate conclusions. The unrestricted exact cycle formula fails by the
+counterexample in Section 8.1; only the proved standard-ray block bound
+is retained. The former general Dickson individual-cycle equality was
+removed because its scalar differential-module derivation was
+incomplete. The binomial result appears in Appendix A as a direct
+Pakovich-based corollary, not as a fourth novelty claim.</p>
+<h3 id="13-theorem-level-dependency-and-prior-art-map">1.3.
+Theorem-level dependency and prior-art map</h3>
+<table>
+<thead>
+<tr>
+<th>Candidate statement</th>
+<th>Imported or closest result</th>
+<th>Residual statement here</th>
+<th>Assurance ceiling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Theorem 2.1</td>
+<td>Atlas [14]; invariant-subspace classification [1, Theorem 3.1];
+zero-cycle composition structure [2, Theorem 2.2]</td>
+<td>completed formal-moment isomorphism and equality of cyclic rank,
+inverse support and reduced root-value span</td>
+<td>same-programme candidate proof</td>
+</tr>
+<tr>
+<td>Theorem A</td>
+<td>Pakovich's main Chebyshev moment theorem [13]; Airy--Lucas examples
+[4, Section 3; 5, Sections 5.2--5.3]</td>
+<td>all-amplitude free module and exact rank law (2N+\varepsilon)</td>
+<td>candidate proof plus bounded exact checks</td>
+</tr>
+<tr>
+<td>Theorem B</td>
+<td>exceptional monodromy (S_4\times C_3) [6]</td>
+<td>explicit five-summand amplitude module, fibre-trace cancellation and
+all-amplitude rank formula</td>
+<td>candidate proof plus bounded exact checks</td>
+</tr>
+<tr>
+<td>Support-to-order bridge</td>
+<td>first-dependence telescoping [7--9]; rapid-decay realization [10];
+perfect pairing [12, Theorem 5.2]</td>
+<td>Atlas support predicts the complete-system minimal order; corrected
+standard-ray bounds</td>
+<td>supporting bridge, not a headline novelty claim</td>
+</tr>
+<tr>
+<td>Theorem C</td>
+<td>Problem 8.4 of [17]; ordinary coefficient Bautin ideals and
+recurrences [18]</td>
+<td>differentiation preserves parameter content on zero-cycle integrals
+and yields the explicit cutoff (d-1)</td>
+<td>candidate theorem under the coefficient convention of Proposition
+6.1</td>
+</tr>
+<tr>
+<td>Appendix A</td>
+<td>Pakovich's Laurent theorem [11, Theorem 6.5]</td>
+<td>elementary binomial specialization and module-rank count</td>
+<td>contextual corollary only</td>
+</tr>
+</tbody>
+</table>
+<p>The dependency is linear only at the first two headline results:
+Theorems A and B use Theorem 2.1 to convert their polynomial-module
+classifications into cyclic-rank formulas. The complete-system bridge
+additionally uses Hien's pairing. Theorem C and Appendix A do not depend
+on Theorem 2.1.</p>
+<h2 id="2-the-reconstructed-support-theorem">2. The reconstructed
+support theorem</h2>
+<p>Let (P) have degree (d), let (\xi(t)) be the normalized inverse
+branch at infinity satisfying (P(\xi(t))=t^d), and let (G'=A). Write
+(\Sigma(P;G)\subset\mathbf Z/d\mathbf Z) for the nonzero, non-trace
+residues represented in the Laurent expansion of (G(\xi(t))).</p>
+<p>For a generic specialized regular value (y), meaning a value outside
+the finite excluded set in Lemma 2.2 below, let
+(P^{-1}(y)={x_1,\ldots,x_d}). Define the reduced root-value span to be
+the complex span of the monodromy orbit of</p>
+<p>[ \bigl(G(x_1),\ldots,G(x_d)\bigr) \quad\text{modulo the constant
+vector}. ]</p>
+<p>Define (q(P,G',dx)) to be the dimension over (\mathbf C(s)) of the
+cyclic span of ([G',dx]) under the connection induced by multiplication
+by (P) in the twisted quotient below.</p>
+<p><strong>Theorem 2.1 (polynomial-amplitude support identity).</strong>
+For every polynomial phase (P) and polynomial primitive (G),</p>
+<p>[ q(P,G',dx) =|\Sigma(P;G)|
+=\dim\operatorname{span}_{\mathrm{red}}{G(x_i)}. \tag{H} ]</p>
+<p><strong>Proof.</strong> Put (K=\mathbf C(s)) and</p>
+<p>[ \mathcal H_P=K[x],dx/(\partial_x+sP')K[x],dx. ]</p>
+<p>After affine normalization, (P) is monic and centred, and (\mathcal
+H_P) has the basis ([dx],\ldots,[x^{d-2}dx]). Over (K_0=\mathbf C((s))),
+introduce rank-one modules (\mathcal K_r=K_0e_r), (1\le r\le d-1),
+with</p>
+<p>[ \partial_se_r=-\frac rd s^{-1}e_r. ]</p>
+<p>For every (n\in\mathbf Z), define</p>
+<p>[ \mu_{r,0}=1,\qquad \mu_{r,n+1}=-\frac{r+nd}{d}\mu_{r,n}, ]</p>
+<p>forward for (n\ge0) and backward for (n&lt;0); explicitly, the same
+equation uniquely gives</p>
+<p>[ \mu_{r,n-1}=-\frac d{r+(n-1)d}\mu_{r,n}. ]</p>
+<p>and on the space of bounded-above Laurent one-forms in residue class
+(r-1) send a monomial to</p>
+<p>[ t^{r+nd-1}dt\longmapsto\mu_{r,n}s^{-n}e_r. \tag{2.1} ]</p>
+<p>Every (\mu_{r,n}) is nonzero. A bounded-above (t)-series maps to an
+(s)-Laurent series of lower-bounded valuation; after scalar extension to
+(K_0), each fixed (s)-coefficient receives only finitely many
+contributions. Thus the transform uses no uncontrolled double Laurent
+series. Since (P(\xi)=t^d), formal integration by parts shows that (2.1)
+kills the pullback of ((\partial_x+sP')K[x],dx), and differentiation in
+(s) corresponds to multiplication by (P). The map therefore descends to
+a differential-module morphism</p>
+<p>[ \mathcal H_P\otimes_KK_0
+\longrightarrow\bigoplus_{r=1}^{d-1}\mathcal K_r. \tag{2.2} ]</p>
+<p>On (x^jdx), (0\le j\le d-2), one has (\xi^j\xi'=t^j+O(t^{j-2})). The
+matrix of (2.2) lies in (\operatorname{Mat}_{d-1}(\mathbf C[[s]])) and
+has triangular constant term with diagonal one. It is therefore an
+isomorphism.</p>
+<p>Now</p>
+<p>[ d(G(\xi))=\sum_m m c_mt^{m-1}dt. ]</p>
+<p>The (r)-component is nonzero exactly when (r\in\Sigma(P;G)), because
+its distinct Laurent coefficients occupy distinct powers of (s) and no
+factor (r+nd) vanishes. If (n_r) is the largest active index in residue
+(r), let (b_r\ne0) be the coefficient of its leading (s^{-n_r}e_r)-term
+and put (\alpha_r=-n_r-r/d). The first (m=|\Sigma(P;G)|) derivative
+columns have leading coefficient matrix</p>
+<p>[ \bigl((\alpha_r)<em>{\underline j}\bigr)</em>{
+r\in\Sigma(P;G),,0\le j&lt;m}. ]</p>
+<p>Its determinant is the Vandermonde
+(\prod_{r&lt;r'}(\alpha_{r'}-\alpha_r)\ne0). Since (1\le r\le d-1),
+(\alpha_r=-n_r-r/d) is nonintegral, so every individual falling
+factorial here is nonzero. The point of retaining
+((\alpha_r)<em>{\underline j}+O(s)) is that the leading determinant is
+the whole falling-factorial matrix, not an unsupported entrywise
+factorization. More explicitly, the direct sum of the active Kummer
+lines is an (m)-dimensional differential submodule containing the seed,
+so the cyclic rank is at most (m). In the Wronskian, factor
+(b_rs^{-n_r}) from row (r) and (s^{-j}) from derivative column (j). The
+remaining constant matrix is exactly (((\alpha_r)</em>{\underline j})),
+whose Vandermonde determinant is nonzero; hence the first (m)
+derivatives are independent and the rank is at least (m). Finally, rank
+of a finite matrix over (K=\mathbf C(s)) is unchanged after the faithful
+field extension (K\subset\mathbf C((s))), so this is the rank of the
+original cyclic span, not only its completion.</p>
+<p>To identify this formal support with the full monodromy-orbit
+quantity, label the inverse roots near infinity by
+(x_j(t)=\xi(\zeta_d^jt)), (0\le j&lt;d), and put</p>
+<p>[ Y_r(t)=\frac1d\sum_{j=0}^{d-1} \zeta_d^{-jr}G(x_j(t))
+=\sum_{m\equiv r\ (d)}c_mt^m. ]</p>
+<p><strong>Lemma 2.2 (equivariant span and generic
+specialization).</strong> Let (\mathcal L) be a splitting field of
+(P(X)-y) over (\mathbf C(y)), let (\Gamma) be its geometric monodromy
+group, and set</p>
+<p>[ \bar g_j=G(x_j)-\frac1d\sum_{i=0}^{d-1}G(x_i),\qquad
+W_G=\operatorname{span}<em>{\mathbf C}{\bar g_0,\ldots,\bar g</em>{d-1}}
+\subset\mathcal L. ]</p>
+<p>Then</p>
+<p>[ \dim_{\mathbf C}W_G=|\Sigma(P;G)|. \tag{2.3} ]</p>
+<p>Moreover, there is a finite algebraic set (Z_G\subset\mathbf A^1_y),
+containing the critical values of (P), such that for every (y_0\notin
+Z_G), and for any simultaneous determination of the roots at (y_0), the
+full (\Gamma)-orbit of the reduced vector ((\bar g_0(y_0),\ldots,\bar
+g_{d-1}(y_0))) spans a complex vector space of dimension (\dim W_G).</p>
+<p><strong>Proof.</strong> Let</p>
+<p>[ E={(a_0,\ldots,a_{d-1})\in\mathbf C^d:\sum_ja_j=0} ]</p>
+<p>and define the (\Gamma)-equivariant map</p>
+<p>[ \Phi_G:E\longrightarrow\mathcal L,\qquad
+(a_j)\longmapsto\sum_ja_jG(x_j). ]</p>
+<p>Its image is (W_G). The non-trace Fourier vectors form a basis of
+(E), and their images are the functions (dY_r), (1\le r&lt;d). The
+nonzero (Y_r) are constant-linearly independent because their Laurent
+supports occupy disjoint residue classes. Hence the rank of (\Phi_G) is
+exactly (|\Sigma(P;G)|), proving (2.3).</p>
+<p>The inertia element at infinity is a (d)-cycle, so it has simple
+spectrum on (\mathbf C^d). Consequently the (\Gamma)-permutation module
+is multiplicity-free: if one irreducible constituent occurred twice,
+every character occurring in its restriction to the inertia cycle would
+occur at least twice, contradicting simple spectrum. Its quotient (W_G)
+is therefore also multiplicity-free. Write (W_G=\bigoplus_\nu W_\nu) as
+its sum of pairwise nonisomorphic irreducible constituents. For every
+nonzero (W_\nu), choose a nonzero algebraic function (h_\nu\in W_\nu).
+Enlarge the critical-value set by the projections to the (y)-line of the
+finitely many zeros and poles of the chosen (h_\nu) on the compactified
+finite cover, and call the resulting finite set (Z_G).</p>
+<p>For (y_0\notin Z_G), evaluation on the chosen simultaneous
+determination defines (\lambda_{y_0}\in W_G^<em>), and its restriction
+to every (W_\nu) is nonzero. Since (W_G^</em>) is multiplicity-free, the
+(\Gamma)-submodule generated by (\lambda_{y_0}) is all of (W_G^*):
+central idempotents first isolate its nonzero component in each
+irreducible summand, and irreducibility then generates that summand. The
+dual injection</p>
+<p>[ \Phi_G^<em>:W_G^</em>\hookrightarrow E^* ]</p>
+<p>is (\Gamma)-equivariant. Under the standard invariant identification
+(E^<em>\simeq E), the vector (\Phi_G^</em>(\lambda_{y_0})) is precisely
+((\bar g_0(y_0),\ldots,\bar g_{d-1}(y_0))). Its full monodromy-orbit
+span therefore has dimension (\dim W_G). A different simultaneous
+determination applies an element of (\Gamma) and does not change that
+dimension. (\square)</p>
+<p>Combining Lemma 2.2 with the cyclic-rank calculation above proves
+(H). (\square)</p>
+<p><strong>Lemma 2.3 (standard-ray flat family and Fourier
+pairing).</strong> Fix a simply connected sector</p>
+<p>[ \mathfrak S={s\ne0:|\arg s-\theta_0|&lt;\varepsilon},
+\qquad0&lt;\varepsilon&lt;\pi/2, ]</p>
+<p>and continuous branches of (\arg s) and (s^{1/d}) on it. For
+(s=|s|e^{i\theta}), set</p>
+<p>[ \phi_k(s)=\frac{\pi-\theta+2\pi k}{d},\qquad
+\ell_k(s)=e^{i\phi_k(s)}[0,\infty), ]</p>
+<p>and orient (\Gamma_k(s)) from infinity to the origin on (\ell_k(s)),
+then from the origin to infinity on (\ell_{k+1}(s)). These contours
+define a flat family of rapid-decay classes on (\mathfrak S), with</p>
+<p>[ \sum_{k=0}^{d-1}[\Gamma_k]=0, \qquad
+[\Gamma_0],\ldots,[\Gamma_{d-2}] \text{ form a basis}. ]</p>
+<p>For (r=j+1), as (s\to0) within any compact subsector of (\mathfrak
+S),</p>
+<p>[ s^{r/d}\int_{\Gamma_k}x^je^{sP(x)}dx \longrightarrow
+\frac{\Gamma(r/d)}d e^{\pi ir/d} (\zeta_d^r-1)\zeta_d^{kr}. \tag{2.4}
+]</p>
+<p>The resulting ((d-1))-by-((d-1)) leading matrix has full rank. Under
+the formal-moment isomorphism (2.2), its Fourier diagonalization gives a
+nondegenerate pairing between the (r)-th Kummer line and the dual
+ray-cycle Fourier mode. Thus a weighted standard ray-cycle has a nonzero
+(r)-projection exactly when its Fourier coefficient and the
+(r)-component of (G(\xi)) are both nonzero.</p>
+<p><strong>Proof.</strong> Along (\ell_k(s)), the leading term satisfies
+(sx^d=-|s||x|^d). The ends therefore stay in consecutive rapid-decay
+sectors and vary continuously with (s); contour deformation inside those
+sectors supplies the flat family. For a large disk, rapid-decay relative
+homology retracts to the reduced zero-dimensional homology of its (d)
+marked decay intervals. The boundary vector of (\Gamma_k) is
+(e_{k+1}-e_k), so the displayed sum is its sole relation and any
+consecutive (d-1) classes form a basis.</p>
+<p>After the scaling (u=s^{1/d}x), the moving rays become the fixed rays
+(\arg u=(\pi+2\pi k)/d), and centredness gives</p>
+<p>[ sP(s^{-1/d}u) =u^d+\sum_{\ell=0}^{d-2}p_\ell s^{1-\ell/d}u^\ell.
+]</p>
+<p>On every compact subsector, Young's inequality gives constants
+(c,C&gt;0), independent of sufficiently small (s), such that the real
+part of the right side is at most (-c|u|^d+C) on all the scaled rays.
+Thus (C(1+|u|)^j e^{-c|u|^d}) is an integrable majorant, differentiation
+under the integral is valid for polynomial amplitudes, and dominated
+convergence reduces the limit to the two adjacent monomial rays for
+(e^{u^d}). Direct Gamma integration, with the stated incoming and
+outgoing orientations, gives (2.4).</p>
+<p>For (0\le k\le d-2) and (1\le r\le d-1), the matrix in (2.4) is a
+nonzero diagonal matrix times ((\zeta_d^{kr})). Its determinant is the
+Vandermonde determinant on (\zeta_d,\ldots,\zeta_d^{d-1}), hence is
+nonzero. Continuation once around (s=0) changes (\phi_k) to
+(\phi_{k-1}), so it sends ([\Gamma_k]) to ([\Gamma_{k-1}]). The ray
+Fourier modes consequently have the same distinct characters as the
+Kummer lines in (2.2), and the nonzero diagonal leading matrix
+identifies the dual characters. This proves the pairing and
+channel-contact assertions. (\square)</p>
+<p>Lemma 2.3 is the channel-contact input used in Section 5. It requires
+neither a Borel-summability claim nor a statement about arbitrary
+contour systems.</p>
+<h3 id="21-general-monodromy-blocks">2.1. General monodromy blocks</h3>
+<p>Let (\Gamma\le S_d) be the monodromy group and let (c\in\Gamma) be
+the inertia (d)-cycle at infinity. The restriction of the permutation
+module to (\langle c\rangle) is the regular cyclic representation, so
+all (c)-characters occur once. An irreducible (\Gamma)-constituent
+cannot occur with multiplicity greater than one, because every character
+in its cyclic restriction would then occur at least twice. Hence</p>
+<p>[ \mathbf C^d=U_0\oplus U_1\oplus\cdots\oplus U_k ]</p>
+<p>is multiplicity-free. Each (U_i) is the span of a unique block
+(B_i\subset\mathbf Z/d\mathbf Z) of Fourier characters, with
+(B_0={0}).</p>
+<p>Let (e_i\in\mathbf C[\Gamma]) be the central projector onto (U_i).
+Applied to the root-value vector of a polynomial (G), its first
+coordinate is fixed by the root stabilizer and therefore belongs to
+(\mathbf C(x)). Every generic root is integral over (\mathbf C[y]), so
+every polynomial root value and every constant linear combination of
+such values is integral over (\mathbf C[y]). The integral closure of
+(\mathbf C[y]) in (\mathbf C(x)), with (y=P(x)), is (\mathbf C[x]);
+hence the projected coordinate is a polynomial. Thus (e_i) descends to a
+(\mathbf C[P])-linear projector (T_i:\mathbf C[x]\to\mathbf C[x]).</p>
+<p>Writing (\mathcal M_i=\operatorname{im}T_i) gives projective direct
+summands of the free (\mathbf C[P])-module (\mathbf C[x]). They are free
+because (\mathbf C[P]) is a PID, and</p>
+<p>[ \mathbf C[x]=\bigoplus_{i=0}^k\mathcal M_i,\qquad \mathcal
+M_0=\mathbf C[P],\qquad \operatorname{rank}_{\mathbf C[P]}\mathcal
+M_i=|B_i|. \tag{2.5} ]</p>
+<p>For completeness, extend scalars from (\mathbf C(P)) to a splitting
+field of (P(x)-y). Generic evaluation identifies (\mathbf
+C(x)\otimes_{\mathbf C(P)}\Omega) with (\Omega^d), and the extended
+image of (T_i) is (U_i\otimes\Omega). Rank is preserved by this
+faithfully flat field extension, so (\operatorname{rank}_{\mathbf
+C[P]}\mathcal M_i=\dim U_i=|B_i|), as asserted in (2.5).</p>
+<p>If (0\ne G_i\in\mathcal M_i), its monodromy orbit spans the
+irreducible module (U_i), while its inverse support is contained in
+(B_i). Theorem 2.1 equates the orbit-span dimension and support
+cardinality, so (\Sigma(P;G_i)=B_i). Therefore</p>
+<p>[ \Sigma(P;G)= \bigcup_{\substack{i&gt;0\T_iG\ne0}}B_i. \tag{2.6}
+]</p>
+<p>In particular, the attainable supports are exactly the unions of
+non-trace blocks. For arbitrary (S), the module of primitives with
+support contained in (S) is the direct sum of the trace module and those
+(\mathcal M_i) whose complete block (B_i) lies in (S); its rank is
+(1+\sum_{B_i\subset S}|B_i|).</p>
+<p>The central-projector descent is important. Dimension counting after
+extension to a formal Laurent field alone would not show that the
+resulting subspace has enough polynomial lattice points.</p>
+<h2 id="3-dickson-amplitude-modules">3. Dickson amplitude modules</h2>
+<p>Let (a\in\mathbf C^\times), (d\ge2), and define Dickson polynomials
+by</p>
+<p>[ D_j(u+a/u,a)=u^j+a^ju^{-j}. ]</p>
+<p>Put (P=D_d(x,a)).</p>
+<h3 id="31-the-module-decomposition">3.1. The module decomposition</h3>
+<p>Every (G\in\mathbf C[x]) has a unique expansion</p>
+<p>[ G=H_0(P)+ \sum_{1\le j&lt;d/2} \bigl(H_j(P)D_j+K_j(P)D_{d-j}\bigr)
++\mathbf1_{2\mid d}H_{d/2}(P)D_{d/2}. \tag{3.1} ]</p>
+<p>Indeed, (D_j(x,a)) is monic of degree (j). Therefore</p>
+<p>[ 1,D_1,\ldots,D_{d-1} ]</p>
+<p>is a triangular change of basis from (1,x,\ldots,x^{d-1}), which is a
+basis of the free (\mathbf C[P])-module (\mathbf C[x]).</p>
+<p>Let (N(G)) be the number of nonzero paired summands in (3.1), and let
+(\varepsilon(G)=1) exactly when the midpoint term is present.</p>
+<h3 id="32-quadratic-obstruction-to-channel-loss">3.2. Quadratic
+obstruction to channel loss</h3>
+<p>Choose (w) and (u) near infinity such that</p>
+<p>[ w+\frac{a^d}{w}=t^d,\qquad u^d=w,\qquad \xi(t)=u+\frac au. ]</p>
+<p>Then (D_d(\xi(t),a)=t^d). With (Y=t^d), the element (w) satisfies</p>
+<p>[ w^2-Yw+a^d=0. \tag{3.2} ]</p>
+<p>Its discriminant (Y^2-4a^d) has two simple zeros and is not a square
+in (\mathbf C(Y)). Hence (w\notin\mathbf C(Y)).</p>
+<p>Fix (1\le j&lt;d/2), abbreviate (F=H_j) and (K=K_j), and evaluate its
+paired summand on (\xi(t)):</p>
+<p>[ \begin{aligned} F(P)D_j+K(P)D_{d-j}
+={}&amp;u^j\left(F(Y)+\frac{a^{d-j}K(Y)}{w}\right)\
+&amp;+u^{-j}\left(a^jF(Y)+K(Y)w\right). \end{aligned} \tag{3.3} ]</p>
+<p>The two lines occupy residues (j) and (d-j) modulo (d). If the first
+coefficient vanished, then either (F=K=0), or (w=-a^{d-j}K/F\in\mathbf
+C(Y)), a contradiction. The same argument applies to the second
+coefficient. Thus every nonzero pair activates exactly two channels.
+Different unordered pairs have disjoint residues, the midpoint has one
+residue, and (H_0(P)) is trace-only.</p>
+<p><strong>Theorem A.</strong></p>
+<p>[ \boxed{q(D_d,G',dx)=2N(G)+\varepsilon(G).} \tag{3.4} ]</p>
+<p>For odd (d), the attainable ranks are (0,2,\ldots,d-1). For even (d),
+every rank (0,1,\ldots,d-1) occurs. Rank zero is equivalent to
+(G\in\mathbf C[P]).</p>
+<h2 id="4-the-exceptional-ritt-amplitude-module">4. The exceptional Ritt
+amplitude module</h2>
+<p>Put</p>
+<p>[ Q=x^4+x,\qquad P=Q^3. ]</p>
+<p>The phase has the two length-two decompositions</p>
+<p>[ P=X^3\circ(X^4+X) =\bigl(X(X+1)^3\bigr)\circ X^3. \tag{4.0} ]</p>
+<p>The collision and its (S_4\times C_3) monodromy are imported from [6,
+Theorems 2.2(1) and 2.3(1)]. The residual candidate developed here is
+the explicit amplitude-module/support classification.</p>
+<p>Define (M_0,M_1,M_2) as in Section 1.1.</p>
+<h3 id="41-direct-decomposition">4.1. Direct decomposition</h3>
+<p>The twelve polynomials</p>
+<p>[ 1,Q,Q^2,\quad\text{and the nine displayed generators of
+}M_0,M_1,M_2 ]</p>
+<p>are monic with distinct leading degrees (0,\ldots,11). Since (P) is
+monic of degree twelve, they form a (\mathbf C[P])-basis. Consequently,
+every (G) decomposes uniquely as</p>
+<p>[ G=A_0(P)+A_1(P)Q+A_2(P)Q^2+m_0+m_1+m_2. \tag{4.1} ]</p>
+<p>In particular, (M_i\cap\mathbf C[Q]={0}).</p>
+<h3 id="42-the-quartic-root-module">4.2. The quartic root module</h3>
+<p>The critical points of (Q) are the three roots of (4x^3+1=0). At a
+critical point (c),</p>
+<p>[ Q(c)=\tfrac34c,\qquad Q''(c)=12c^2\ne0. ]</p>
+<p>Thus the finite critical values are distinct and their branch cycles
+are transpositions. The degree-four cover is connected, so the graph
+defined by these transpositions is connected. Edge transpositions of a
+connected graph generate (S_4). Hence</p>
+<p>[ \operatorname{Mon}(Q)=S_4. ]</p>
+<p>The reduced permutation representation is the irreducible
+three-dimensional standard representation. If (R\notin\mathbf C[Q]), its
+reduced root-value vector is nonzero, so the span of its continuations
+is the entire standard module. The equivariant generic-specialization
+lemma in the proof of Theorem 2.1 applies to (Q): outside its finite
+excluded set, the full orbit and conjugate-function spans both have
+dimension three. Theorem 2.1 then says that the inverse series of (R)
+activates all three nonzero residues modulo four.</p>
+<h3 id="43-fusion-to-degree-twelve">4.3. Fusion to degree twelve</h3>
+<p>The normalized inverse of (Q) has the form</p>
+<p>[ \eta(t)=t\phi(t^{-3}),\qquad \phi(z)^4+z\phi(z)=1,\qquad \phi(0)=1.
+\tag{4.2} ]</p>
+<p>All monomial degrees in (M_0,M_1,M_2) are respectively congruent to
+(1,2,0) modulo three. Multiplication by (P) preserves those classes. The
+quartic trace channel requires a separate exclusion because it becomes a
+non-trace channel after composition with the outer cube.</p>
+<p>For (R\in\mathbf C[x]), put</p>
+<p>[ \operatorname{tr}<em>Q R(y)=\sum</em>{Q(u)=y}R(u). ]</p>
+<p>Writing (p_j(y)=\operatorname{tr}_Q(x^j)), Newton's identities for
+(x^4+x-y) give</p>
+<p>[ \begin{gathered} p_1=p_2=p_5=0,\qquad p_3=-3,\quad p_6=3,\quad
+p_9=-3,\ p_4=4y,\quad p_7=-7y,\quad p_{10}=10y,\ p_8=4y^2,\quad
+p_{11}=-11y^2. \end{gathered} ]</p>
+<p>Thus the displayed generators of (M_0) and (M_1) are (Q)-trace-free,
+whereas those of (M_2) have constant traces (-3,3,-3). Under arbitrary
+(\mathbf C[P])-coefficients the first two traces remain zero, while the
+third remains supported only in powers of (y^3), because</p>
+<p>[ \operatorname{tr}_Q(F(P)R)=F(y^3)\operatorname{tr}_Q R. ]</p>
+<p>Moreover,</p>
+<p>[ \frac14\operatorname{tr}<em>Q R(t^4)
+=\frac14\sum</em>{j=0}^3R\bigl(\eta(i^jt)\bigr) ]</p>
+<p>is exactly the part of (R(\eta(t))) with exponent divisible by four.
+It vanishes on (M_0,M_1); on (M_2) it lies in powers of (t^{12}), the
+trace class modulo twelve. Every nonzero (m_i) also has all three
+nonzero quartic channels by Section 4.2. The trace filter, the fixed
+modulo-three class and the Chinese remainder theorem therefore give</p>
+<p>[ \begin{array}{c|c} M_0 &amp; {1,7,10}\ M_1 &amp; {2,5,11}\ M_2
+&amp; {3,6,9}. \end{array} \tag{4.3} ]</p>
+<p>Meanwhile (Q(\eta(t))=t^4), so the two non-trace composition channels
+are ({4}) and ({8}). These five blocks partition the eleven nonzero
+residues modulo twelve.</p>
+<p><strong>Theorem B.</strong> The unique expansion (4.1) satisfies</p>
+<p>[ \boxed{ q(P,G',dx)= \mathbf1_{A_1\ne0}+\mathbf1_{A_2\ne0}
++3\sum_{i=0}^2\mathbf1_{m_i\ne0}. } \tag{4.4} ]</p>
+<p>Every rank from zero through eleven occurs. A nonzero element of one
+fused module has rank exactly three, at every coefficient degree.</p>
+<h2 id="5-support-predicted-weighted-period-operators">5.
+Support-predicted weighted period operators</h2>
+<p>Let (P,A\in\mathbf C[x]), (\deg P=d\ge2), and (G'=A). Define</p>
+<p>[ \mathcal H_P= \frac{\mathbf C(s)[x],dx} {(\partial_x+sP'(x))\mathbf
+C(s)[x],dx} ]</p>
+<p>and (v_j=[P^jA,dx]). Let (q) be the least index for which
+(v_0,\ldots,v_q) are dependent.</p>
+<h3 id="51-exact-reduction">5.1. Exact reduction</h3>
+<p>Write</p>
+<p>[ P'(x)=p x^{d-1}+L(x),\qquad \deg L&lt;d-1. ]</p>
+<p>The twisted derivative of (x^k) gives</p>
+<p>[ [x^{k+d-1}dx] =-\frac{k}{sp}[x^{k-1}dx] -\frac1p[x^kL(x)dx].
+\tag{5.1} ]</p>
+<p>Every replacement lowers degree, so reduction terminates in the
+basis</p>
+<p>[ dx,x,dx,\ldots,x^{d-2}dx. ]</p>
+<p>The representative is unique: a nonzero twisted derivative of a
+polynomial (f) has leading degree (\deg f+d-1), and therefore cannot be
+a nonzero polynomial of degree below (d-1).</p>
+<h3 id="52-operator-and-exact-witness">5.2. Operator and exact
+witness</h3>
+<p>The first dependence has a unique monic rational form</p>
+<p>[ v_q+\sum_{j&lt;q}c_j(s)v_j=0. ]</p>
+<p>Pairing with a flat rapid-decay cycle and differentiating under the
+integral produces</p>
+<p>[ \left(D_s^q+\sum_{j&lt;q}c_j(s)D_s^j\right)I_{\Gamma,A}=0. ]</p>
+<p>For rational inputs, write the left operator as
+(L=\sum_{j=0}^qp_j(s)D_s^j). Take the least common multiple in (\mathbf
+Q[s]) of the denominators of the monic rational coefficients, divide the
+resulting polynomial coefficients by their greatest common polynomial
+factor, clear the remaining scalar denominators, divide by the positive
+greatest common divisor of all integer coefficients, and choose the sign
+so that the leading coefficient of (p_q(s)) is positive. This gives a
+unique primitive representative in (\mathbf Z[s]\langle D_s\rangle); the
+Ore coefficients are written on the left, and the only units removed are
+nonzero rational scalars and common polynomial factors.</p>
+<p>The reduction also reconstructs (C(x,s)\in\mathbf Q(s)[x])
+satisfying</p>
+<p>[ \sum_j c_j(s)P(x)^jA(x) =\partial_xC(x,s)+sP'(x)C(x,s). \tag{5.2}
+]</p>
+<p>Equation (5.2) is a directly checkable annihilation certificate.</p>
+<p>Hien's perfect-pairing theorem [12, Theorem 5.2] is stated for flat
+algebraic connections in all dimensions, so it applies in particular to
+the rank-one exponential connection on (\mathbf A^1). This scope and
+theorem number were checked directly in the public arXiv source. After
+specializing rational coefficient functions at a generic nonsingular
+value of (s), an operator of order (r&lt;q) annihilating every period
+would pair a nonzero class in the span of (v_0,\ldots,v_r) to zero
+against every rapid-decay homology class. This contradicts
+perfectness.</p>
+<p><strong>Support-to-order theorem.</strong></p>
+<p>[ \boxed{ \operatorname{ord}<em>{\min,\mathrm{complete}}(P,A) =q
+=|\Sigma(P;G)| =\dim\operatorname{span}</em>{\mathrm{red}}{G(x_i)}. }
+\tag{5.3} ]</p>
+<p>Here minimality refers to one operator annihilating the complete
+period system. A specified individual cycle may satisfy a lower-order
+equation. No generic-individual-period claim is made. If (q=0), then
+([A,dx]=0) and every period is identically zero.</p>
+<h3 id="53-a-corrected-cycle-specific-refinement">5.3. A corrected
+cycle-specific refinement</h3>
+<p>Use the standard ray-cycle basis at infinity. For a zero-trace
+coefficient vector (n), the Fourier--Gamma realization (2.4) and the
+Kummer decomposition (2.2) give the sectorial monodromy-channel
+decomposition</p>
+<p>[ I_n(s)=\sum_{r\in\Sigma(P;G)}\widehat n(r)\Lambda_r(s), ]</p>
+<p>where (\Lambda_r\ne0) has formal-monodromy eigenvalue (\exp(-2\pi i
+r/d)). Put</p>
+<p>[ R=\operatorname{supp}(\widehat n)\cap\Sigma(P;G) ]</p>
+<p>and let (B_1,\ldots,B_t) be the monodromy blocks meeting (R). If an
+order-(r) rational scalar operator annihilates (I_n), its completed
+cyclic differential module at (s=0) has rank (r) and is stable under
+formal monodromy. Lagrange interpolation in that monodromy projects the
+formal expansion of (I_n) onto its nonzero components with distinct
+eigenvalues; those projections are independent, so (r\ge |R|). The
+central-projector decomposition supplies a complete-system operator of
+order (|B_i|) for each touched block. Hence</p>
+<p>[ \boxed{ |R|\le \operatorname{ord}<em>{\min}(I_n) \le
+\sum</em>{i=1}^t|B_i|\le q(P,G',dx). } \tag{5.4} ]</p>
+<p>If every touched block is fully touched, the first two quantities in
+(5.4) coincide. No general equality with the block-mass upper bound is
+claimed; such an equality requires a separate irreducibility analysis of
+the touched differential modules.</p>
+<h2 id="6-the-uniform-zero-cycle-bautin-bound">6. The uniform zero-cycle
+Bautin bound</h2>
+<p>Let (f\in\mathbf C[x]) be monic of degree (d\ge2), let</p>
+<p>[ C(t)=\sum_{j=1}^d n_jx_j(t),\qquad \sum_jn_j=0, ]</p>
+<p>be any zero-cycle of (f), and fix an arbitrary perturbation degree
+(n):</p>
+<p>[ g_{\boldsymbol a}(x)=\sum_{r=0}^n a_rx^r, \qquad R=\mathbf
+C[a_0,\ldots,a_n]. ]</p>
+<p>Continue the original roots by (f(z_j)+\epsilon g_{\boldsymbol
+a}(z_j)=t). With (C_\epsilon(t)=\sum_jn_jz_j(t,\epsilon)), define the
+displacement exactly as in [17]:</p>
+<p>[ \Delta_C(t,\epsilon;\boldsymbol a) =\int_{C_\epsilon(t)}f
+=-\epsilon\sum_jn_jg_{\boldsymbol a}(z_j(t,\epsilon)), ]</p>
+<p>and write</p>
+<p>[ \Delta_C(t,\epsilon;\boldsymbol a) =\sum_{\mu\ge1}\epsilon^\mu
+M_\mu(t;\boldsymbol a). ]</p>
+<p>If (n&gt;d), additional roots of the perturbed equation tend to
+infinity and receive zero weights, exactly as in [17]. Fix a simply
+connected regular (t)-domain and let (\mathcal K) be the algebra of
+algebraic-function germs there. For (F\in R\otimes_{\mathbf C}\mathcal
+K), define (\operatorname{cont}_R(F)) to be the ideal generated by the
+(R)-coordinates of (F) in any complex basis of its finite coefficient
+span. A complex change of basis leaves the ideal unchanged. Set</p>
+<p>[ \mathcal B_k=\sum_{\mu=1}^k\operatorname{cont}<em>R(M</em>\mu),
+\qquad \mathcal
+B_\infty=\sum_{\mu\ge1}\operatorname{cont}<em>R(M</em>\mu). ]</p>
+<p>These are ordinary coefficient ideals, not radicals or only centre
+loci.</p>
+<p><strong>Proposition 6.1 (content equals the local Taylor-coefficient
+ideal).</strong> For a regular base point (t_0), write</p>
+<p>[ F(\boldsymbol a,t)=\sum_{k\ge0}\tau_k(\boldsymbol a)(t-t_0)^k.
+]</p>
+<p>Then</p>
+<p>[ \operatorname{cont}_R(F)=(\tau_0,\tau_1,\ldots)\subset R. \tag{6.1}
+]</p>
+<p>Indeed, if (F=\sum_{\ell=1}^sb_\ell(\boldsymbol a)v_\ell(t)) in a
+complex basis of its coefficient span, every (\tau_k) is a complex
+linear combination of the (b_\ell). Conversely, linear independence of
+the analytic germs (v_\ell) implies that their infinite
+Taylor-coefficient vectors are linearly independent. Some finite
+(s)-by-(s) jet submatrix is therefore invertible, expressing every
+(b_\ell) as a complex linear combination of finitely many (\tau_k). This
+proves (6.1), independently of the chosen regular point or determination
+because analytic continuation and change of basis act invertibly on the
+finite germ span. Thus the content ideal is exactly the ordinary
+Taylor-coefficient Bautin ideal of [18].</p>
+<p>For clarity, define the source-style coefficient ideal at a regular
+point by</p>
+<p>[ \mathcal I_k^{\mathrm{coeff}}(t_0) =\bigl(\text{all Taylor
+coefficients of all local determinations of }
+M_1,\ldots,M_k\bigr)\subset R. ]</p>
+<p>Proposition 6.1 gives the equality of ideals (\mathcal
+I_k^{\mathrm{coeff}}(t_0)=\mathcal B_k), not merely equality of radicals
+or centre loci. Analytic continuation and a change of regular base point
+act by invertible complex changes on the finite germ spans, so the
+equality is branch- and base-point-independent. Localizing the parameter
+ring preserves it: (S^{-1}\mathcal I_k^{\mathrm{coeff}}=S^{-1}\mathcal
+B_k) for every multiplicative set (S\subset R). Equality therefore also
+implies equality of radicals and of affine centre loci for this
+coefficient convention. No equivalence is asserted with an ideal formed
+inside a larger analytic-function ring, with radicalization before
+contraction to (R), or at a singular (t)-value.</p>
+<h3 id="61-all-order-melnikov-identity">6.1. All-order Melnikov
+identity</h3>
+<p>Put (J_\mu=\int_Cg_{\boldsymbol a}^\mu). Lagrange--Bürmann inversion
+on each continued root branch gives</p>
+<p>[ M_\mu(t;\boldsymbol a) =\frac{(-1)^\mu}{\mu!} \left(\frac
+d{dt}\right)^{\mu-1}J_\mu(t;\boldsymbol a), \qquad \mu\ge1. \tag{6.2}
+]</p>
+<p>Indeed, if (G_j(u)=g(x_j(u))) and (u_j+\epsilon G_j(u_j)=t),
+Lagrange--Bürmann gives</p>
+<p>[ G_j(u_j(t))=\sum_{\nu\ge0}\frac{(-\epsilon)^\nu}{(\nu+1)!}
+D_t^\nu(G_j^{\nu+1})(t). ]</p>
+<p>Multiplication by (-\epsilon n_j) and summation gives (6.2). No
+comparison between (\deg f) and (\deg g) enters this branchwise
+identity.</p>
+<h3 id="62-monodromy-injectivity">6.2. Monodromy injectivity</h3>
+<p>Let</p>
+<p>[ \mathcal V_C=\left{\int_Ch:\ h\in\mathbf C[x]\right}. ]</p>
+<p><strong>Lemma 6.2.</strong> For every (q\ge1), (D_t^q) is injective
+on (\mathcal V_C).</p>
+<p><strong>Proof.</strong> If (F=\int_Ch) and (D_t^qF=0), then locally
+(F) is a polynomial in (t) of degree less than (q), hence is
+single-valued. Monodromy (\tau) around infinity is a (d)-cycle on the
+branches of (f). Since (C) has total weight zero,</p>
+<p>[ \frac1d\sum_{k=0}^{d-1}\tau^kC=0. ]</p>
+<p>Every continuation (\int_{\tau^kC}h) equals the same single-valued
+function (F). Averaging therefore gives</p>
+<p>[ F=\int_{\frac1d\sum_k\tau^kC}h=0. ]</p>
+<p>Thus the kernel is zero. (\square)</p>
+<p>If (F=\sum_\ell b_\ell(\boldsymbol a)v_\ell) in a complex basis of
+its finite coefficient span in (\mathcal V_C), Lemma 6.2 says that the
+(D_t^qv_\ell) remain linearly independent. Consequently</p>
+<p>[ \operatorname{cont}_R(D_t^qF)=\operatorname{cont}_R(F), \tag{6.3}
+]</p>
+<p>and (6.2) yields</p>
+<p>[
+\operatorname{cont}<em>R(M</em>\mu)=\operatorname{cont}<em>R(J</em>\mu).
+\tag{6.4} ]</p>
+<h3 id="63-cayley--hamilton-recurrence">6.3. Cayley--Hamilton
+recurrence</h3>
+<p>Work in the free rank-(d) (R[t])-algebra</p>
+<p>[ \mathcal A=R[t,x]/(f(x)-t) ]</p>
+<p>with basis (1,x,\ldots,x^{d-1}). Let (T_g) be multiplication by
+(g_{\boldsymbol a}). For arbitrary (\deg g), reduction modulo the monic
+relation (f(x)-t) gives a (d)-by-(d) matrix over (R[t]). Write</p>
+<p>[ \chi_g(Z)=Z^d+c_1(t;\boldsymbol a)Z^{d-1} +\cdots+c_d(t;\boldsymbol
+a). ]</p>
+<p>Cayley--Hamilton, followed by the (R[t])-linear zero-cycle
+functional, gives for (\mu\ge d)</p>
+<p>[ J_\mu+\sum_{i=1}^dc_iJ_{\mu-i}=0. \tag{6.5} ]</p>
+<p>At (\mu=d), the last term is zero because (J_0=\int_C1=0).
+Multiplication by (H\in R[t]) cannot enlarge parameter content: its
+(R)-coefficients multiply existing generators, while
+(t^k\int_Ch=\int_Cf^kh) remains in (\mathcal V_C). Hence</p>
+<p>[ \operatorname{cont}_R(HF)\subseteq\operatorname{cont}_R(F).
+\tag{6.6} ]</p>
+<p>Induction in (6.5) puts every (\operatorname{cont}<em>R(J</em>\mu))
+in the ideal generated by the first (d-1) such contents. Equation (6.4)
+transfers the statement unchanged to the Melnikov sequence.</p>
+<p><strong>Theorem C (ordinary coefficient Bautin bound).</strong></p>
+<p>[ \boxed{\mathcal B_\infty=\mathcal B_{d-1}.} \tag{6.7} ]</p>
+<p>Thus the ordinary coefficient Bautin index is at most (d-1) for every
+degree-(d) phase, every zero-cycle and every polynomial perturbation. In
+the degree box of [17],</p>
+<p>[ \boxed{b_{\mathrm{coeff}}(m)\le m-1.} \tag{6.8} ]</p>
+<p>For a nonmonic phase, divide (f,t), and (g) by the nonzero leading
+coefficient of (f). This is a coefficient-ring automorphism together
+with multiplication of Melnikov coefficients by units, so it preserves
+the stabilization index and extends (6.8) to the full degree box.</p>
+<h3 id="64-sharpness-and-convention-boundary">6.4. Sharpness and
+convention boundary</h3>
+<p>Let (Z_0(f;\mathbf Z)={(n_1,\ldots,n_d)\in\mathbf Z^d:\sum n_j=0}) be
+the integral zero-cycle lattice, and put (Z_0(f;\mathbf C)=Z_0(f;\mathbf
+Z)\otimes_{\mathbf Z}\mathbf C). For (f=x^d), (x_j=\omega^jT) and
+weights in the complexified module (n_j=\omega^j), the Atlas DFT support
+is the singleton ({d-1}). With (g=ax), (6.2) vanishes through order
+(d-2) and is nonzero at order (d-1). Hence (6.7) is sharp on the
+complexified cycle module (Z_0(f;\mathbf C)); this does not establish
+sharpness on the integral cycle lattice (Z_0(f;\mathbf Z)).</p>
+<p>For a witness in the integral lattice, let (p) be the least prime
+divisor of (d), put (q=d/p), and take (n_j=p-1) for (j\equiv0\pmod p)
+and (n_j=-1) otherwise. Its Fourier support is ({q,2q,\ldots,(p-1)q});
+with (g=ax), the first nonzero order is (q=d/p). This proves an
+integer-cycle lower bound but not integer-cycle sharpness of (d-1).</p>
+<p>Proposition 6.1 identifies the parameter-content ideal with the
+ordinary local Taylor-coefficient Bautin ideal used in [18]. We denote
+the resulting degree-box index by (b_{\mathrm{coeff}}(m)). If the terse
+ideal chain in [17] is intended in this ordinary coefficient sense, then
+(b(m)=b_{\mathrm{coeff}}(m)) and Theorem C answers Problem 8.4. The
+source does not settle that ambient-ring interpretation; alternative
+analytic-function-ring, pre-contraction radical, and singular-base-point
+conventions remain outside the claim.</p>
+<h2 id="7-exact-computational-evidence">7. Exact computational
+evidence</h2>
+<p>The computations are deterministic falsification and replay evidence.
+They do not prove the all-degree statements.</p>
+<h3 id="71-atlas-independent-supportrank-reconstruction">7.1.
+Atlas-independent support/rank reconstruction</h3>
+<p>A separate exact checker imports no Atlas source. It constructs the
+normalized inverse by its coefficient recursion and compares observed
+non-trace residue channels with the exact rank of a standalone
+twisted-quotient Krylov matrix. Twenty-eight generic, composite, power,
+trace-only and Dickson cases pass through inverse-series depth 48. The
+checker first sums all monomial contributions at a Laurent exponent and
+examines only the exponent window complete at the declared depth. This
+prevents false channels from uncancelled partial expansions. The receipt
+witnesses nonzero coefficients in every observed channel; it does not
+certify vanishing beyond the finite window.</p>
+<h3 id="72-dickson-battery">7.2. Dickson battery</h3>
+<p>One hundred seventy-one exact nondegenerate cases cover degrees three
+through nine at (a=1,2,-1/2), both generators of every pair, nonconstant
+(\mathbf Q[P])-linear combinations and cross-pair unions. The predicted
+module support, Atlas inverse-series support and twisted-Krylov rank
+agree in every case. An (a=0) control loses the paired channel exactly
+as expected, confirming the excluded power degeneration.</p>
+<h3 id="73-exceptional-battery">7.3. Exceptional battery</h3>
+<p>Twenty-three exact cases cover all nine fused generators,
+within-module combinations, nonconstant (\mathbf Q[P])-coefficients, the
+two composition channels and cross-block unions. A separate
+Lagrange-inversion program checks all nine module/channel combinations
+through (\mathbf Q[P])-coefficient degree six using exact nonzero
+minors.</p>
+<h3 id="74-weighted-operator-reconstruction">7.4. Weighted operator
+reconstruction</h3>
+<p>Two implementations agree coefficient for coefficient on seven cases
+of orders zero through four. The standalone implementation imports no
+Atlas code. It verifies (5.2) directly, and its verifier rejects a
+semantically modified operator even after the outer JSON digest is
+recomputed.</p>
+<p>Representative operators, with coefficients ordered from low to high
+derivative, are</p>
+<p>[ \begin{array}{c|c|c} (P,A)&amp;q&amp;(c_0,\ldots,c_q)\ \hline
+(x^7,1)&amp;1&amp;(1,7s)\ ((x^4+x)^3,4x^3+1)&amp;1&amp;(1,3s)\
+(x^5-5x^3+5x,1)&amp;2&amp;(-100s^2-1,25s,25s^2). \end{array} ]</p>
+<p>This is same-programme independent implementation, not independent
+human or institutional reproduction.</p>
+<h3 id="75-bautin-bound-checks">7.5. Bautin-bound checks</h3>
+<p><code>check_general_bautin_bound.py</code> constructs fully generic
+quotient multiplication matrices with perturbation degree strictly above
+phase degree: ((d,n)=(2,4)) and ((3,5)). Exact arithmetic verifies
+Cayley--Hamilton and the zero-cycle infinity-monodromy average through
+degree twelve.</p>
+<p><code>screen_power_bautin_uniform.py</code> checks rectangular
+power-phase cases ((d,n)=(2,4),(3,5),(4,6)), representative coefficient
+ideals through order eight, and exact Fourier support and first-hit
+order for the lower witnesses. The checks deliberately exercise
+perturbations beyond the former degree boundary; neither finite program
+replaces the all-degree argument.</p>
+<p><code>check_bautin_content_bridge.py</code> uses the non-power phase
+(f=x^2+x), the cycle (x_1-x_2), and a generic quartic perturbation.
+Through order three it compares direct implicit-root coefficients with
+(6.2), verifies equality of power-moment and differentiated Melnikov
+content, and recovers the same ideal from finite Taylor jets. All orders
+exercise dependent coefficient-function spans.</p>
+<h3 id="76-package-negative-controls">7.6. Package negative
+controls</h3>
+<p>The package-mutation verifier checks five distinct failure classes.
+It requires rejection of a modified manuscript byte stream, an
+undeclared root file, an unknown manifest field, a receipt whose
+embedded digest no longer matches, and a one-byte mutation of the frozen
+Atlas archive. Each mutation must fail with its expected diagnostic
+class; an unrelated exception is not a pass. These controls test the
+package gate, not the mathematical proofs.</p>
+<h2 id="8-discussion">8. Discussion</h2>
+<p>The Dickson result turns pairwise Laurent symmetry into a uniform
+all-amplitude classification. Its parity effect is easy to miss if one
+checks only even degrees: odd phases have no midpoint and therefore
+cannot have odd rank.</p>
+<p>The exceptional Ritt result shows a different fusion mechanism. The
+three correction-polynomial modules are not composition summands. Their
+rigidity comes from the irreducible standard representation of the
+quartic monodromy, while the outer cube imposes a modulo-three grading.
+The result is a complete support partition rather than a list of
+isolated examples.</p>
+<p>The coefficient-Bautin theorem is the broadest of the three claims.
+Its content is not Noetherianity alone: Cayley--Hamilton gives a finite
+recurrence, and infinity monodromy shows that the order-dependent
+differentiation in the Melnikov formula preserves the ordinary parameter
+ideal exactly. This produces an explicit linear bound for the full
+degree box, not only a description of its centre set.</p>
+<p>The weighted order theorem is conceptually useful even though its
+reduction algorithm is not new. Creative telescoping discovers the first
+dependence; the reconstructed support quantity predicts its order from
+inverse support or root values. Chen et al. [16] explain non-minimality
+of individual-contour telescopers through residues in the rational
+setting. Their result is a close discrete analogue of the residue
+obstruction below, not a prior statement of our complete-system support
+identity. That prediction is the narrow bridge proposed here.</p>
+<h3 id="81-why-raw-channel-count-is-not-individual-period-order">8.1.
+Why raw channel count is not individual-period order</h3>
+<p>A stronger formula considered during development would make the
+minimal order of an individual period equal the number of residue
+channels left active by its cycle DFT. That statement is false.</p>
+<p>For (P=D_3(x,1)=x^3-3x), (A=1), a complex zero-cycle can isolate one
+of the two residues of (G=x). The isolated function nevertheless
+satisfies the modified Bessel equation</p>
+<p>[ f''+\frac1sf'-\left(4+\frac{1}{9s^2}\right)f=0, ]</p>
+<p>which has no first-order factor over (\mathbf C(s)). A rational
+logarithmic derivative would have residue (\pm1/3) at zero, residue (1)
+at every other finite pole, and total finite residue (-1/2) from its
+expansion at infinity—an impossibility. Differentiation preserves the
+residue label but does not preserve the one-dimensional span of a
+channel function.</p>
+<p>This adverse example is why no unrestricted equality with (|R|) is
+claimed. It is consistent with the repaired bound (5.4): one touched
+channel lies inside a two-dimensional Dickson block, so the upper bound
+is two, and the explicit irreducible Bessel equation makes the actual
+order two.</p>
+<h2 id="9-limitations-and-open-obligations">9. Limitations and open
+obligations</h2>
+<ol type="1">
+<li>The load-bearing support theorem is reproduced self-containedly,
+with a corrected Wronskian expansion, but the reconstruction followed
+the Atlas proof architecture and was performed within the same research
+programme. It has deterministic internal replay, not independent
+reconstruction or specialist proof review.</li>
+<li>The novelty search is bounded. Exact-phrase searches and the
+inspected primary corpus cannot establish priority.</li>
+<li>No independent human specialist has reviewed the complete
+proofs.</li>
+<li>The programs use exact rational inputs; algebraic or floating inputs
+are outside the retained certificate contract.</li>
+<li>The standard-ray channel contact is proved by the formal-moment and
+Fourier--Gamma realization. Arbitrary contour systems and contour
+degeneracies remain outside the result.</li>
+<li>The original exact active-channel formula was refuted. Only the
+corrected block bounds (5.4) are retained; a general Dickson block-mass
+equality is not claimed without a separate differential-module
+derivation.</li>
+<li>Proposition 6.1 identifies the parameter-content ideal with the
+ordinary local Taylor-coefficient Bautin ideal. Alternative localized,
+radical, or analytic-parameter conventions remain outside the
+theorem.</li>
+</ol>
+<p>These obligations prevent any claim of peer review, specialist
+validation or absolute priority. They do not invalidate a clearly
+labelled unrefereed candidate release after author approval and package
+review.</p>
+<h2 id="10-reproducibility-and-data-availability">10. Reproducibility
+and data availability</h2>
+<p>The candidate research package contains:</p>
+<ul>
+<li>immutable source-provenance records and hashes;</li>
+<li>the reconstructed support theorem, the general block theorem and
+four full result dossiers;</li>
+<li>the bounded novelty audit;</li>
+<li>the binomial Laurent supplement and the retained adverse
+counterexample;</li>
+<li>exact falsification programs and JSON receipts, including an
+Atlas-independent support/rank reconstruction;</li>
+<li>the standalone weighted-order implementation and verifier;</li>
+<li>public theorem-specific adversarial review notes; and</li>
+<li>a manifest and offline integrity checker.</li>
+</ul>
+<p>Research inputs are polynomial expressions and public scholarly
+sources. No personal-data analysis is performed. The immutable Atlas
+archive and frozen scholarly-source responses are referenced by path and
+SHA-256 in SOURCE_PROVENANCE.json but are not redistributed by this
+manuscript.</p>
+<h2 id="11-ethics-statement">11. Ethics statement</h2>
+<p>This is mathematical and computational research using public sources
+and synthetic polynomial inputs. No human participants, animals,
+clinical data, or personal data are involved. Ethical approval was not
+applicable.</p>
+<h2 id="references">References</h2>
+<ol type="1">
+<li>F. Pakovich and M. Muzychuk, “Solution of the polynomial moment
+problem,” <em>Proceedings of the London Mathematical Society</em> 99
+(2009), 633--657, doi:10.1112/plms/pdp010; arXiv:0710.4085v2, <a
+href="https://doi.org/10.1112/plms/pdp010">https://doi.org/10.1112/plms/pdp010</a>.</li>
+<li>A. Álvarez Sánchez, J. L. Bravo Trinidad and P. Mardešić, “Vanishing
+Abelian integrals on zero-dimensional cycles,” <em>Proceedings of the
+London Mathematical Society</em> 107 (2013), 1302--1330,
+doi:10.1112/plms/pdt012; arXiv:1101.1777v2, <a
+href="https://doi.org/10.1112/plms/pdt012">https://doi.org/10.1112/plms/pdt012</a>.</li>
+<li>L. Gavrilov and F. Pakovich, “Moments on Riemann surfaces and
+hyperelliptic Abelian integrals,” <em>Commentarii Mathematici
+Helvetici</em> 89 (2014), 125--155, doi:10.4171/CMH/314;
+arXiv:1107.3029v1, <a
+href="https://doi.org/10.4171/CMH/314">https://doi.org/10.4171/CMH/314</a>.</li>
+<li>S. Charbonnier, N. K. Chidambaram, E. Garcia-Failde and A.
+Giacchetto, “Shifted Witten classes and topological recursion,”
+<em>Transactions of the American Mathematical Society</em> 377 (2024),
+1069--1110, doi:10.1090/tran/9046; arXiv:2203.16523v2, <a
+href="https://doi.org/10.1090/tran/9046">https://doi.org/10.1090/tran/9046</a>.</li>
+<li>V. Fantini and A. Fenyes, “The Regularity of ODEs and Thimble
+Integrals with Respect to Borel Summation,” <em>SIGMA</em> 21 (2025),
+article 101, doi:10.3842/SIGMA.2025.101; arXiv:2407.01412v4, <a
+href="https://doi.org/10.3842/SIGMA.2025.101">https://doi.org/10.3842/SIGMA.2025.101</a>.</li>
+<li>A. Behajaina, J. Konig and D. Neftin, “Monodromy groups of
+polynomials of composition length 2,” arXiv:2603.27609v2, 2026, <a
+href="https://arxiv.org/abs/2603.27609">https://arxiv.org/abs/2603.27609</a>.</li>
+<li>A. Bostan, S. Chen, F. Chyzak, Z. Li and G. Xin, “Hermite Reduction
+and Creative Telescoping for Hyperexponential Functions,” in
+<em>Proceedings of ISSAC 2013</em>, 77--84, doi:10.1145/2465506.2465946;
+arXiv:1301.5038v1, <a
+href="https://doi.org/10.1145/2465506.2465946">https://doi.org/10.1145/2465506.2465946</a>.</li>
+<li>S. Chen and M. Kauers, “Trading Order for Degree in Creative
+Telescoping,” <em>Journal of Symbolic Computation</em> 47 (2012),
+968--995, doi:10.1016/j.jsc.2012.02.002; arXiv:1108.4508, <a
+href="https://doi.org/10.1016/j.jsc.2012.02.002">https://doi.org/10.1016/j.jsc.2012.02.002</a>.</li>
+<li>A. Bostan, P. Lairez and B. Salvy, “Creative Telescoping for
+Rational Functions Using the Griffiths-Dwork Method,” in <em>Proceedings
+of ISSAC 2013</em>, 93--100, doi:10.1145/2465506.2465935;
+arXiv:1301.4313v2, <a
+href="https://doi.org/10.1145/2465506.2465935">https://doi.org/10.1145/2465506.2465935</a>.</li>
+<li>M. Hien and C. Roucairol, “Integral representations for solutions of
+exponential Gauss-Manin systems,” <em>Bulletin de la Société
+Mathématique de France</em> 136 (2008), 505--532,
+doi:10.24033/bsmf.2564; arXiv:0704.1739v1, <a
+href="https://doi.org/10.24033/bsmf.2564">https://doi.org/10.24033/bsmf.2564</a>.</li>
+<li>F. Pakovich, “On rational functions orthogonal to all powers of a
+given rational function on a curve,” <em>Moscow Mathematical
+Journal</em> 13 (2013), 693--731,
+doi:10.17323/1609-4514-2013-13-4-693-731; arXiv:0910.2105v1, <a
+href="https://doi.org/10.17323/1609-4514-2013-13-4-693-731">https://doi.org/10.17323/1609-4514-2013-13-4-693-731</a>.</li>
+<li>M. Hien, “Periods for flat algebraic connections,” <em>Inventiones
+Mathematicae</em> 178 (2009), 1--22, Theorem 5.2,
+doi:10.1007/s00222-009-0185-7; arXiv:0803.3463v1, <a
+href="https://doi.org/10.1007/s00222-009-0185-7">https://doi.org/10.1007/s00222-009-0185-7</a>.</li>
+<li>F. Pakovich, “On polynomials orthogonal to all powers of a Chebyshev
+polynomial on a segment,” <em>Israel Journal of Mathematics</em> 142
+(2004), 273--283, doi:10.1007/BF02771537; arXiv:math/0212040, <a
+href="https://doi.org/10.1007/BF02771537">https://doi.org/10.1007/BF02771537</a>.</li>
+<li>Anonymous, <em>Inverse-Root Support, Polynomial Amplitudes, and
+Laurent Moment Channels</em>, version 0.7.0-candidate, Evidence Press /
+Zenodo, 2026, doi:10.5281/zenodo.22049564, <a
+href="https://doi.org/10.5281/zenodo.22049564">https://doi.org/10.5281/zenodo.22049564</a>.
+Unrefereed combined theorem candidate and reproducibility package.</li>
+<li>F. Pakovich, C. Pech and A. K. Zvonkin, “Laurent Polynomial Moment
+Problem: A Case Study,” in <em>Dynamical Numbers: Interplay between
+Dynamical Systems and Number Theory</em>, Contemporary Mathematics 532,
+American Mathematical Society, 2010, 177--194,
+doi:10.1090/conm/532/10490; arXiv:0910.2691, <a
+href="https://doi.org/10.1090/conm/532/10490">https://doi.org/10.1090/conm/532/10490</a>.</li>
+<li>S. Chen, M. Kauers, C. Koutschan, X. Li, R.-H. Wang and Y. Wang,
+“Non-minimality of minimal telescopers explained by residues,”
+arXiv:2502.03757v1, 2025, <a
+href="https://arxiv.org/abs/2502.03757">https://arxiv.org/abs/2502.03757</a>.</li>
+<li>J. L. Bravo, P. Mardešić, D. Novikov and J. Pontigo-Herrera,
+“Infinitesimal and tangential 16-th Hilbert problem on zero-cycles,”
+<em>Bulletin des Sciences Mathématiques</em> 202 (2025), 103634,
+doi:10.1016/j.bulsci.2025.103634; arXiv:2312.03081v1, <a
+href="https://doi.org/10.1016/j.bulsci.2025.103634">https://doi.org/10.1016/j.bulsci.2025.103634</a>.</li>
+<li>D. Batenkov and Y. Yomdin, “Taylor Domination, Difference Equations,
+and Bautin Ideals,” arXiv:1411.7629v1, 2014, <a
+href="https://arxiv.org/abs/1411.7629">https://arxiv.org/abs/1411.7629</a>.</li>
+<li>M. Briskin and Y. Yomdin, “Algebraic Families of Analytic Functions,
+I,” <em>Journal of Differential Equations</em> 136 (1997), 248--267,
+doi:10.1006/jdeq.1996.3250, <a
+href="https://doi.org/10.1006/jdeq.1996.3250">https://doi.org/10.1006/jdeq.1996.3250</a>.</li>
+</ol>
+<h2 id="appendix-a-binomial-laurent-moments">Appendix A. Binomial
+Laurent moments</h2>
+<p>This appendix records a useful corollary. Pakovich, Pech and Zvonkin
+[15] name and exemplify this exact Laurent polynomial moment-problem
+family. The corollary is not counted as one of the three residual
+novelty claims because its load-bearing classification is already in
+Pakovich [11].</p>
+<p>Let</p>
+<p>[ L(z)=z^{-m}+cz^n,\qquad h=\gcd(m,n),\qquad N=m+n. ]</p>
+<p>For Laurent one-forms define</p>
+<p>[ \mathcal A(L)= {A(z),dz:\operatorname{Res}_0L^kA,dz=0 \text{ for
+every }k\ge1}. ]</p>
+<p><strong>Proposition A.1.</strong> The complete solution module is</p>
+<p>[ \mathcal A(L)= \bigoplus_{\ell\not\equiv-1\pmod h} \mathbf
+C[z,z^{-1}]_\ell,dz \ \oplus\ d\mathbf C[L], ]</p>
+<p>and</p>
+<p>[ \operatorname{rank}_{\mathbf C[L]}\mathcal A(L)
+=\frac{(h-1)N}{h}+1. ]</p>
+<p>In particular, if (\gcd(m,n)=1), then (\mathcal A(L)=d\mathbf
+C[L]).</p>
+<p><strong>Proof.</strong> Rotation by an (h)-th root of unity fixes (L)
+and multiplies (z^\ell dz) by (\omega^{\ell+1}). Every non-residual
+grade therefore has all moments zero.</p>
+<p>For the residual grade put (w=z^h). The phase becomes</p>
+<p>[ \widetilde L(w)=w^{-m/h}+cw^{n/h}, ]</p>
+<p>with coprime exponents. Its critical points satisfy</p>
+<p>[ w^{N/h}=\frac{m}{cn}, ]</p>
+<p>after cancellation of the common factor. They are simple, and their
+critical values are distinct because exponentiation by (-m/h) is
+injective on the ((N/h))-th-root orbit. Thus the connected monodromy
+group is transitive and generated by transpositions, hence is the
+natural symmetric group.</p>
+<p>The phase is proper because it has poles at both zero and infinity.
+Its rational cover is connected, the finite critical points above are
+simple with distinct values, and their transpositions generate a
+transitive group; hence the group is (S_{N/h}) and is doubly transitive.
+Pakovich's Laurent-moment classification [11, Theorem 6.5] therefore
+applies with every hypothesis verified and says that the primitive
+residual-grade solutions are exactly (d\mathbf C[\widetilde L]).
+Pullback gives (d\mathbf C[L]).</p>
+<p>Finally, (\mathbf C[z,z^{-1}],dz) is free of rank (N) over (\mathbf
+C[L]), with a consecutive exponent window from (-m) through (n-1). Each
+deck grade has rank (N/h). The (h-1) automatic grades contribute
+((h-1)N/h), and the exact residual summand contributes one.
+(\square)</p>
+<p>No finite-test bound is stated here: its degree convention and exact
+specialization of Pakovich's orbit bound would require separate
+verification.</p>
+</main>
+</body>
+</html>

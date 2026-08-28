@@ -1,0 +1,534 @@
+{
+  "atlas_source_imported": false,
+  "case_count": 28,
+  "claim_boundary": {
+    "established": "exact twisted-Krylov ranks and exact nonzero inverse-series coefficients witnessing the same number of channels in every case",
+    "not_established": [
+      "vanishing of every unobserved channel beyond the finite series window",
+      "the all-degree support theorem",
+      "independent human or institutional reproduction",
+      "novelty, peer review, or publication readiness"
+    ]
+  },
+  "inverse_series_depth": 48,
+  "receipt_sha256": "2b7300dc5128b5299f3321e3ce181b7af034db17b81e0e64bad60a5e395f0913",
+  "records": [
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        },
+        "2": {
+          "coefficient": "-1/3",
+          "highest_observed_t_exponent": -1
+        }
+      },
+      "label": "generic-cubic",
+      "observed_support": [
+        1,
+        2
+      ],
+      "phase": "x**3 + x + 1",
+      "primitive": "x",
+      "twisted_krylov_rank": 2
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        },
+        "2": {
+          "coefficient": "-1/4",
+          "highest_observed_t_exponent": -2
+        },
+        "3": {
+          "coefficient": "-1/4",
+          "highest_observed_t_exponent": -1
+        }
+      },
+      "label": "generic-quartic",
+      "observed_support": [
+        1,
+        2,
+        3
+      ],
+      "phase": "x**4 + x**2 + x + 1",
+      "primitive": "x",
+      "twisted_krylov_rank": 3
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        },
+        "2": {
+          "coefficient": "9/25",
+          "highest_observed_t_exponent": -3
+        },
+        "3": {
+          "coefficient": "-117/625",
+          "highest_observed_t_exponent": -7
+        },
+        "4": {
+          "coefficient": "-2/5",
+          "highest_observed_t_exponent": -1
+        }
+      },
+      "label": "generic-quintic",
+      "observed_support": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "phase": "x**5 + 2*x**3 - x + 1",
+      "primitive": "x",
+      "twisted_krylov_rank": 4
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        },
+        "2": {
+          "coefficient": "-1/6",
+          "highest_observed_t_exponent": -4
+        },
+        "3": {
+          "coefficient": "1/24",
+          "highest_observed_t_exponent": -3
+        },
+        "4": {
+          "coefficient": "1/54",
+          "highest_observed_t_exponent": -8
+        },
+        "5": {
+          "coefficient": "-1/6",
+          "highest_observed_t_exponent": -1
+        }
+      },
+      "label": "generic-sextic",
+      "observed_support": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "phase": "x**6 + x**4 + x + 1",
+      "primitive": "x",
+      "twisted_krylov_rank": 5
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        },
+        "2": {
+          "coefficient": "-3/343",
+          "highest_observed_t_exponent": -5
+        },
+        "3": {
+          "coefficient": "-2/7",
+          "highest_observed_t_exponent": -4
+        },
+        "4": {
+          "coefficient": "2/49",
+          "highest_observed_t_exponent": -3
+        },
+        "5": {
+          "coefficient": "-1353/16807",
+          "highest_observed_t_exponent": -9
+        },
+        "6": {
+          "coefficient": "-1/7",
+          "highest_observed_t_exponent": -1
+        }
+      },
+      "label": "generic-septic",
+      "observed_support": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "phase": "x**7 + x**5 + 2*x**2 + 1",
+      "primitive": "x",
+      "twisted_krylov_rank": 6
+    },
+    {
+      "channel_witnesses": {
+        "2": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 2
+        }
+      },
+      "label": "composition-one",
+      "observed_support": [
+        2
+      ],
+      "phase": "x**6 - 3*x**4/4 + 3*x**2/16 - 1/64",
+      "primitive": "x**2 - 1/4",
+      "twisted_krylov_rank": 1
+    },
+    {
+      "channel_witnesses": {
+        "4": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 4
+        }
+      },
+      "label": "composition-two",
+      "observed_support": [
+        4
+      ],
+      "phase": "x**6 - 3*x**4/4 + 3*x**2/16 - 1/64",
+      "primitive": "x**4 - x**2/2 + 1/16",
+      "twisted_krylov_rank": 1
+    },
+    {
+      "channel_witnesses": {
+        "2": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 2
+        },
+        "4": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 4
+        }
+      },
+      "label": "composition-mixed",
+      "observed_support": [
+        2,
+        4
+      ],
+      "phase": "x**6 - 3*x**4/4 + 3*x**2/16 - 1/64",
+      "primitive": "x**4 + x**2/2 - 3/16",
+      "twisted_krylov_rank": 2
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        }
+      },
+      "label": "power-3-single",
+      "observed_support": [
+        1
+      ],
+      "phase": "x**3",
+      "primitive": "x",
+      "twisted_krylov_rank": 1
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        },
+        "2": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 2
+        }
+      },
+      "label": "power-3-mixed",
+      "observed_support": [
+        1,
+        2
+      ],
+      "phase": "x**3",
+      "primitive": "x**2 + x",
+      "twisted_krylov_rank": 2
+    },
+    {
+      "channel_witnesses": {},
+      "label": "power-3-trace",
+      "observed_support": [],
+      "phase": "x**3",
+      "primitive": "x**3",
+      "twisted_krylov_rank": 0
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        },
+        "2": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 2
+        }
+      },
+      "label": "dickson-3",
+      "observed_support": [
+        1,
+        2
+      ],
+      "phase": "x**3 - 3*x",
+      "primitive": "x**2 + x - 2",
+      "twisted_krylov_rank": 2
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        }
+      },
+      "label": "power-4-single",
+      "observed_support": [
+        1
+      ],
+      "phase": "x**4",
+      "primitive": "x",
+      "twisted_krylov_rank": 1
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        },
+        "2": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 2
+        }
+      },
+      "label": "power-4-mixed",
+      "observed_support": [
+        1,
+        2
+      ],
+      "phase": "x**4",
+      "primitive": "x**2 + x",
+      "twisted_krylov_rank": 2
+    },
+    {
+      "channel_witnesses": {},
+      "label": "power-4-trace",
+      "observed_support": [],
+      "phase": "x**4",
+      "primitive": "x**4",
+      "twisted_krylov_rank": 0
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        },
+        "3": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 3
+        }
+      },
+      "label": "dickson-4",
+      "observed_support": [
+        1,
+        3
+      ],
+      "phase": "x**4 - 4*x**2 + 2",
+      "primitive": "x**3 - 2*x",
+      "twisted_krylov_rank": 2
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        }
+      },
+      "label": "power-5-single",
+      "observed_support": [
+        1
+      ],
+      "phase": "x**5",
+      "primitive": "x",
+      "twisted_krylov_rank": 1
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        },
+        "2": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 2
+        }
+      },
+      "label": "power-5-mixed",
+      "observed_support": [
+        1,
+        2
+      ],
+      "phase": "x**5",
+      "primitive": "x**2 + x",
+      "twisted_krylov_rank": 2
+    },
+    {
+      "channel_witnesses": {},
+      "label": "power-5-trace",
+      "observed_support": [],
+      "phase": "x**5",
+      "primitive": "x**5",
+      "twisted_krylov_rank": 0
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        },
+        "4": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 4
+        }
+      },
+      "label": "dickson-5",
+      "observed_support": [
+        1,
+        4
+      ],
+      "phase": "x**5 - 5*x**3 + 5*x",
+      "primitive": "x**4 - 4*x**2 + x + 2",
+      "twisted_krylov_rank": 2
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        }
+      },
+      "label": "power-6-single",
+      "observed_support": [
+        1
+      ],
+      "phase": "x**6",
+      "primitive": "x",
+      "twisted_krylov_rank": 1
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        },
+        "2": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 2
+        }
+      },
+      "label": "power-6-mixed",
+      "observed_support": [
+        1,
+        2
+      ],
+      "phase": "x**6",
+      "primitive": "x**2 + x",
+      "twisted_krylov_rank": 2
+    },
+    {
+      "channel_witnesses": {},
+      "label": "power-6-trace",
+      "observed_support": [],
+      "phase": "x**6",
+      "primitive": "x**6",
+      "twisted_krylov_rank": 0
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        },
+        "5": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 5
+        }
+      },
+      "label": "dickson-6",
+      "observed_support": [
+        1,
+        5
+      ],
+      "phase": "x**6 - 6*x**4 + 9*x**2 - 2",
+      "primitive": "x**5 - 5*x**3 + 6*x",
+      "twisted_krylov_rank": 2
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        }
+      },
+      "label": "power-7-single",
+      "observed_support": [
+        1
+      ],
+      "phase": "x**7",
+      "primitive": "x",
+      "twisted_krylov_rank": 1
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        },
+        "2": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 2
+        }
+      },
+      "label": "power-7-mixed",
+      "observed_support": [
+        1,
+        2
+      ],
+      "phase": "x**7",
+      "primitive": "x**2 + x",
+      "twisted_krylov_rank": 2
+    },
+    {
+      "channel_witnesses": {},
+      "label": "power-7-trace",
+      "observed_support": [],
+      "phase": "x**7",
+      "primitive": "x**7",
+      "twisted_krylov_rank": 0
+    },
+    {
+      "channel_witnesses": {
+        "1": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 1
+        },
+        "6": {
+          "coefficient": "1",
+          "highest_observed_t_exponent": 6
+        }
+      },
+      "label": "dickson-7",
+      "observed_support": [
+        1,
+        6
+      ],
+      "phase": "x**7 - 7*x**5 + 14*x**3 - 7*x",
+      "primitive": "x**6 - 6*x**4 + 9*x**2 + x - 2",
+      "twisted_krylov_rank": 2
+    }
+  ],
+  "schema": "support-rank-reconstruction-falsification-v1",
+  "status": "pass"
+}

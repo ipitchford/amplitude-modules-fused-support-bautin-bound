@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="amplitude-modules-release-integrity" tests="9" failures="0" errors="0" skipped="0" timestamp="2026-08-28T11:44:26Z">
+  <properties>
+    <property name="execution_mode" value="ordinary" />
+    <property name="target_sha256" value="aa1e73f62ccb89bae6ff00aaee844721172eca515d4da64c4c41539e51977b13" />
+    <property name="manifest_sha256" value="699e07bf26cfbc4d4c4f6a9ed21cb3bee3b543d5a331d3fbecdc4d4301b4c186" />
+  </properties>
+  <testcase classname="release.integrity" name="package_semantics_nonreplay" time="0.000" />
+  <testcase classname="release.integrity" name="stored_full_replay_receipt" time="0.000" />
+  <testcase classname="release.integrity" name="replay_inventory_byte_identity" time="0.000" />
+  <testcase classname="release.integrity" name="nonreplay_claim_boundary" time="0.000" />
+  <testcase classname="release.integrity" name="forged_nonreplay_claim_rejected" time="0.000" />
+  <testcase classname="release.integrity" name="declared_mutations_rejected" time="0.000" />
+  <testcase classname="release.integrity" name="source_authorization_inventory" time="0.000" />
+  <testcase classname="release.integrity" name="forbidden_public_text" time="0.000" />
+  <testcase classname="release.integrity" name="pdf_structure_and_identity" time="0.000" />
+</testsuite>

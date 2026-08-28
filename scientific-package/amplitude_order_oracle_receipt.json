@@ -1,0 +1,128 @@
+{
+  "case_count": 7,
+  "claim_boundary": {
+    "established": "exact same-programme operator construction, residual checks, replay, and mutation rejection",
+    "not_established": [
+      "independent implementation",
+      "individual-cycle minimality",
+      "novelty, priority, specialist review, or publication readiness"
+    ]
+  },
+  "receipt_sha256": "f70eb6ba7895a83bc18caaf70c459d511eaa60380dacf644d80d5edbba10f625",
+  "records": [
+    {
+      "amplitude": "1",
+      "certificate_sha256": "f0e6bc2599a2e265a80c418d89e13b81df79ce0e53669fb7b50d04e2b4556015",
+      "label": "power seed",
+      "operator_coefficients": [
+        "1",
+        "7*s"
+      ],
+      "order": 1,
+      "phase": "x**7",
+      "support": [
+        1
+      ]
+    },
+    {
+      "amplitude": "7*x**6",
+      "certificate_sha256": "4f008e41ae4ce092523189e44bcb3080aad368091b782f0d9f1639aa13347daa",
+      "label": "rank-zero exact amplitude",
+      "operator_coefficients": [
+        "1"
+      ],
+      "order": 0,
+      "phase": "x**7",
+      "support": []
+    },
+    {
+      "amplitude": "1",
+      "certificate_sha256": "5689257d6bdb9a4109ce74c4e70ab2a7cb98d39990b70580e9560e95002fdd22",
+      "label": "Dickson seed",
+      "operator_coefficients": [
+        "-100*s**2 - 1",
+        "25*s",
+        "25*s**2"
+      ],
+      "order": 2,
+      "phase": "x**5-5*x**3+5*x",
+      "support": [
+        1,
+        4
+      ]
+    },
+    {
+      "amplitude": "4*x**3",
+      "certificate_sha256": "0de7c70c58a603b358f742c4c5b7cd76d6fa7e8fe89706db1aa60015db4c6feb",
+      "label": "rank-four exceptional amplitude",
+      "operator_coefficients": [
+        "8*(81*s + 5)",
+        "132*s*(81*s + 110)",
+        "432*s**2*(27*s + 305)",
+        "27*s**3*(81*s + 4480)",
+        "20736*s**4"
+      ],
+      "order": 4,
+      "phase": "(x**4+x)**3",
+      "support": [
+        1,
+        4,
+        7,
+        10
+      ]
+    },
+    {
+      "amplitude": "7*x**6+7*x**3",
+      "certificate_sha256": "c89568863ce243ed8d6e4ebb13e18db809d68c3820f4cd8780ee6845e77776be",
+      "label": "fused exceptional amplitude",
+      "operator_coefficients": [
+        "8*(81*s - 7)",
+        "27*s*(81*s + 368)",
+        "27*s**2*(27*s + 896)",
+        "6912*s**3"
+      ],
+      "order": 3,
+      "phase": "(x**4+x)**3",
+      "support": [
+        1,
+        7,
+        10
+      ]
+    },
+    {
+      "amplitude": "4*x**3+1",
+      "certificate_sha256": "557a2fc5a66b21d510936c774034d37988963e23c0e19ab656c99f09e06cfb9a",
+      "label": "quartic-factor amplitude",
+      "operator_coefficients": [
+        "1",
+        "3*s"
+      ],
+      "order": 1,
+      "phase": "(x**4+x)**3",
+      "support": [
+        4
+      ]
+    },
+    {
+      "amplitude": "1",
+      "certificate_sha256": "129eeb480ae825db569d39141d5f369f1250aae17c60e83e1575c5f9805f0a26",
+      "label": "affine transport",
+      "operator_coefficients": [
+        "27*s**3 + 40",
+        "-80*s",
+        "384*s**2",
+        "256*s**3"
+      ],
+      "order": 3,
+      "phase": "(x+2)**4+(x+2)",
+      "support": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "schema": "polynomial-amplitude-order-oracle-test-receipt-v1",
+  "semantic_mutations_rejected": 1,
+  "status": "pass"
+}

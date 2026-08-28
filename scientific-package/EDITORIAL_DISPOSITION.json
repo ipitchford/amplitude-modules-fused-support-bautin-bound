@@ -1,0 +1,71 @@
+{
+  "assurance_class": "internal_model_mediated_editorial_review",
+  "case_id": "csf-amplitude-modules-2026-08-28",
+  "claim_ceiling": "anonymous unrefereed theorem candidate containing two Atlas-family classifications and one ordinary coefficient-Bautin theorem candidate; not three historically posed open problems solved, independent validation, settled priority, formal verification, or peer review",
+  "claim_id": "amplitude-modules-fused-support-bautin-bound-v0.1.0-candidate",
+  "confirmation": {
+    "decision": null,
+    "reviewed_target_sha256": null,
+    "status": "pending"
+  },
+  "decision": "MAJOR_REVISION_HOLD_FOR_REPAIR",
+  "decision_confidence": 0.94,
+  "panel": [
+    {
+      "report": "EDITORIAL_01_EDITOR_IN_CHIEF.md",
+      "role": "editor-in-chief",
+      "sha256": "30c141dd930445c4983760f66f4217d8a1a697c52c46f38d22fb4d4d3b4e060d",
+      "verdict": "Major Revision"
+    },
+    {
+      "report": "EDITORIAL_02_METHODOLOGY_SPECIALIST.md",
+      "role": "methodology-specialist",
+      "sha256": "333e8807b8304282438a6ec01a7a01804113cf3942ddb4a33d88cb662a40fa35",
+      "verdict": "Major Revision"
+    },
+    {
+      "report": "EDITORIAL_03_DOMAIN_SPECIALIST.md",
+      "role": "domain-specialist",
+      "sha256": "3322dfa9760f3abffbd8ef453f1751400cbaafd4f792de788c888d21c8c097fa",
+      "verdict": "Major Revision"
+    },
+    {
+      "report": "EDITORIAL_04_APPLICATIONS_SPECIALIST.md",
+      "role": "applications-specialist",
+      "sha256": "8efc39deb8cb81bf062c4089a7d907bc0dbee76bec34c67cead0934891e455c1",
+      "verdict": "Major Revision"
+    },
+    {
+      "report": "EDITORIAL_05_DEVILS_ADVOCATE.md",
+      "role": "devils-advocate",
+      "sha256": "3e3d1b44a29b46990640104c7b87eeb8f0ea06ed23cb066c06b45b4f62409ff0",
+      "verdict": "Major Revision"
+    }
+  ],
+  "publication_authority": {
+    "authorized_by_user": true,
+    "authorized_on": "2026-08-28",
+    "scope": "full Evidence Press candidate workflow; no outreach"
+  },
+  "repair_conditions": [
+    "R1 root-span and monodromy equivalence",
+    "R2 analytic standard-ray realization",
+    "R3 coherent unrefereed candidate governance",
+    "R4 removal of stale and over-strong claims",
+    "R5 exact problem provenance",
+    "R6 displayed exceptional Ritt collision and residual contribution",
+    "R7 replay semantics and release-unit binding",
+    "R8 source authorization and component licences",
+    "R9 reader-first and accessible presentation"
+  ],
+  "repair_status": "implementation_complete_pending_rebuild_and_preflight",
+  "reviewed_target": {
+    "archive": "amplitude-modules-fused-support-bautin-bound-v0.1.0-candidate-review.zip",
+    "sha256": "7e7f8f9b3d09feca0ea6019045d946dc4e845b73eb8bc7fe027aa3cea807f0d1"
+  },
+  "schema": "evidence-press-editorial-disposition-v1",
+  "synthesis": {
+    "report": "EDITORIAL_06_SYNTHESIS.md",
+    "sha256": "195bb789323c3bf52830964b914c2a64d21d553eabe3567be45a9809721f6bf8"
+  }
+}

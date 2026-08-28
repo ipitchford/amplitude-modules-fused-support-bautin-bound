@@ -1,0 +1,27 @@
+{
+  "aggregate": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 9
+  },
+  "manifest_sha256": "699e07bf26cfbc4d4c4f6a9ed21cb3bee3b543d5a331d3fbecdc4d4301b4c186",
+  "optimized_junit_sha256": "29320033cdee706a27fd3e4076eede9890fd5cf169c42e61e9715c85c2afa94a",
+  "ordinary_junit_sha256": "627092c7a57eaf32d5bd6b79420e5a96f6314688208e882b6cdcd88e458c2882",
+  "receipt_sha256": "6b5025fe42da4d16041668129b823b34d14734f60ce1b9a399e308a89cec3b67",
+  "recorded_at": "2026-08-28T11:44:26Z",
+  "schema": "evidence-press-junit-parity-v1",
+  "status": "pass",
+  "target_sha256": "aa1e73f62ccb89bae6ff00aaee844721172eca515d4da64c4c41539e51977b13",
+  "testcase_inventory": [
+    "release.integrity::package_semantics_nonreplay",
+    "release.integrity::stored_full_replay_receipt",
+    "release.integrity::replay_inventory_byte_identity",
+    "release.integrity::nonreplay_claim_boundary",
+    "release.integrity::forged_nonreplay_claim_rejected",
+    "release.integrity::declared_mutations_rejected",
+    "release.integrity::source_authorization_inventory",
+    "release.integrity::forbidden_public_text",
+    "release.integrity::pdf_structure_and_identity"
+  ]
+}

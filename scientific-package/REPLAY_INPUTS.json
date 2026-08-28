@@ -1,0 +1,18 @@
+{
+  "inputs": [
+    {
+      "authorization_basis": "user-authorized Evidence Press workflow for an unchanged prior Evidence Press release asset; the asset carries its own CC0, MIT, and component-NOASSERTION map and is not relicensed here",
+      "authorization_status": "AUTHORIZED_UNMODIFIED_SEPARATE_RELEASE_ASSET",
+      "delivery": "separate_release_asset",
+      "filename": "cyclicity-support-fusion-atlas-v0.7.0-candidate.zip",
+      "licence_boundary": "retain the archive's LICENSE, LICENSE-CODE, LICENSES.md, and PUBLIC_DOMAIN.md; NOASSERTION components remain NOASSERTION",
+      "required_for": "complete Atlas-dependent deterministic replay",
+      "sha256": "3a132530f31c1af3870de7af7a13d41389ffbf051ab2760b3c0110173c268e8a",
+      "size_bytes": 5604552,
+      "source_record": "atlas-package-v070",
+      "upstream_url": "https://github.com/ipitchford/cyclicity-support-fusion-atlas/releases/download/v0.7.0-candidate/cyclicity-support-fusion-atlas-v0.7.0-candidate.zip",
+      "version": "v0.7.0-candidate"
+    }
+  ],
+  "schema": "evidence-press-replay-inputs-v1"
+}

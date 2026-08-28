@@ -1,0 +1,16 @@
+captured_utc=2026-08-28T10:58:36Z
+os_product=macOS
+os_version=26.6.2
+os_build=25G83
+locale=C.UTF-8
+python=3.14.6
+python_implementation=CPython
+python_compiler=Clang 21.0.0 (clang-2100.0.123.102)
+sympy=1.14.0
+pandoc=3.9
+pdftex=3.141592653-2.6-1.40.29
+texlive=2026
+kpathsea=6.4.2
+qpdf=12.3.2
+source_date_epoch=1787875200
+toolchain_class=recorded-host-not-hermetic-container

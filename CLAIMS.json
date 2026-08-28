@@ -1,0 +1,31 @@
+{
+  "case_id": "csf-amplitude-modules-2026-08-28",
+  "claim_ceiling": "Anonymous unrefereed theorem candidate containing two Atlas-family classifications and one ordinary coefficient-Bautin theorem candidate.",
+  "claim_id": "amplitude-modules-fused-support-bautin-bound-v0.1.0-candidate",
+  "headline_claims": [
+    {
+      "id": "dickson-amplitude-classification",
+      "status": "unrefereed_theorem_candidate",
+      "summary": "Cyclic-rank classification for every polynomial amplitude of each nondegenerate Dickson phase D_d(x,a), a != 0."
+    },
+    {
+      "id": "exceptional-ritt-fused-support",
+      "status": "unrefereed_theorem_candidate",
+      "summary": "Fused-support classification for every polynomial amplitude of P=(x^4+x)^3, including the hidden trace cancellations."
+    },
+    {
+      "id": "ordinary-coefficient-bautin-bound",
+      "status": "unrefereed_theorem_candidate",
+      "summary": "For the manuscript-defined ordinary coefficient index, b_coeff(m) <= m-1; transfer to the cited b(m) is conditional on convention identity."
+    }
+  ],
+  "not_established": [
+    "three historically posed open problems solved",
+    "independent specialist validation",
+    "journal peer review",
+    "formal verification",
+    "settled novelty or priority",
+    "real planar limit-cycle bound"
+  ],
+  "schema": "evidence-press-public-claims-v1"
+}

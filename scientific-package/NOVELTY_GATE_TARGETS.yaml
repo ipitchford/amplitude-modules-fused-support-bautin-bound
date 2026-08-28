@@ -1,0 +1,269 @@
+schema: cyclicity-novelty-gate-targets-v1
+search_date: 2026-08-27
+shared_source:
+  originating_reference: "Cyclicity Support-Fusion Atlas v0.7.0-candidate"
+  url: "https://evidencepress.org/releases/cyclicity-support-fusion-atlas/"
+  archive_sha256: "3a132530f31c1af3870de7af7a13d41389ffbf051ab2760b3c0110173c268e8a"
+search_constraints:
+  primary_sources_only_for_technical_claims: true
+  databases_or_corpora:
+    - arXiv
+    - zbMATH Open
+    - Crossref
+    - publisher full text and metadata
+    - EuDML and Numdam
+    - public web full-text indexes
+  inaccessible_or_incomplete:
+    - MathSciNet subscription search
+    - comprehensive non-English literature search
+    - unpublished specialist knowledge
+
+targets:
+  - target_id: dickson-all-amplitude-rank
+    intended_contribution_unit: theorem
+    claim:
+      exact_statement: |
+        For every a in C* and d >= 2, every G in C[x] has the unique
+        C[D_d]-module expansion
+          G = H_0(D_d)
+              + sum_{1 <= j < d/2}(H_j(D_d)D_j + K_j(D_d)D_{d-j})
+              + 1_{2|d} H_{d/2}(D_d)D_{d/2}.
+        If N(G) counts nonzero paired summands and epsilon(G) records the
+        even-degree midpoint, then the cyclic rank of the amplitude G' is
+          q(D_d,G' dx) = 2 N(G) + epsilon(G).
+        Hence odd d realizes exactly 0,2,...,d-1 and even d realizes every
+        rank 0,1,...,d-1.
+      exclusions:
+        - no claim to invent Dickson or Chebyshev polynomial identities
+        - no claim to invent Puiseux-Fourier support methods
+        - no claim to discover individual Bessel or Airy-Lucas equations
+        - no absolute priority claim
+    normalisation:
+      parameter: "D_d(x,a) is monic and D_j(u+a/u,a)=u^j+a^j u^{-j}"
+      chebyshev_translation: "D_d(2 sqrt(a) z,a)=2 a^(d/2) T_d(z)"
+      basis_order: "1,D_1,...,D_{d-1} over C[D_d]"
+      support_pairing: "j is identified with d-j; d/2 is a singleton"
+    sequences:
+      - name: attainable_ranks_odd_degree
+        exact_values:
+          - "d=3: 0,2"
+          - "d=5: 0,2,4"
+          - "d=7: 0,2,4,6"
+      - name: attainable_ranks_even_degree
+        exact_values:
+          - "d=4: 0,1,2,3"
+          - "d=6: 0,1,2,3,4,5"
+          - "d=8: 0,1,2,3,4,5,6,7"
+    small_exact_instances:
+      - "D_3=x^3-3x: D_1 and D_2 each have support {1,2} and rank 2"
+      - "D_4=x^4-4x^2+2: D_1 has support {1,3}; D_2 has {2}"
+      - "D_5=x^5-5x^3+5x: D_1 has {1,4}; D_2 has {2,3}"
+    generating_functions: []
+    matrices: []
+    aliases:
+      analysis:
+        - exponential periods with Chebyshev phase
+        - twisted de Rham cyclic rank
+        - inverse Puiseux support
+        - zero-dimensional Abelian integrals
+      probability: []
+      combinatorics:
+        - dihedral permutation module
+        - paired residue classes
+      mathematical_physics:
+        - Chebyshev or Lucas thimble integrals
+        - modified Bessel channels
+        - Airy-Lucas integrals
+      representation_theory:
+        - dihedral monodromy character blocks
+        - inertia Fourier characters
+    known_invariants:
+      monodromy: "dihedral in the nondegenerate Dickson/Chebyshev case"
+      block_sizes: "2 for conjugate pairs and 1 for an even midpoint"
+      rank_formula: "2N+epsilon"
+
+  - target_id: exceptional-ritt-all-amplitude-module
+    intended_contribution_unit: theorem
+    claim:
+      exact_statement: |
+        Let Q=x^4+x and P=Q^3. Every G in C[x] has a unique decomposition
+          G=A_0(P)+A_1(P)Q+A_2(P)Q^2+m_0+m_1+m_2
+        with
+          M_0=<x, x^7+7x^4/4, x^10-5x^4/2>,
+          M_1=<x^2, x^5, x^11+11x^8/4>,
+          M_2=<x^3, x^6, x^9>.
+        The cyclic rank is
+          1_{A_1 != 0}+1_{A_2 != 0}+3 sum_i 1_{m_i != 0},
+        with support blocks {4}, {8}, {1,7,10}, {2,5,11}, {3,6,9}.
+      exclusions:
+        - no novelty claim for the phase or its Ritt collision
+        - no novelty claim for monodromy S4 x C3
+        - no claim that finite coefficient searches prove all-degree noncancellation
+        - no absolute priority claim
+    normalisation:
+      collision: "(x^4+x)^3 = x^3 composed with (x^4+x)"
+      alternate_collision: "(X^3+1)^3 X^3 after the standard Ritt normalisation"
+      basis_order: "leading degrees 0 through 11 over C[P]"
+      grading: "modulo 3 fused with the three nontrace residues modulo 4"
+    sequences:
+      - name: nontrace_block_sizes
+        exact_values: ["1", "1", "3", "3", "3"]
+      - name: attainable_ranks
+        exact_values: ["0,1,2,3,4,5,6,7,8,9,10,11"]
+    small_exact_instances:
+      - "x^7+7x^4/4 has support {1,7,10} and rank 3"
+      - "x^11+11x^8/4 has support {2,5,11} and rank 3"
+      - "x^9 has support {3,6,9} and rank 3"
+      - "Q has support {4}; Q^2 has support {8}"
+    generating_functions:
+      - name: quartic_inverse
+        expression: "phi(z)^4 + z phi(z) = 1, phi(0)=1"
+        role: "forces one degree class modulo 3"
+    matrices: []
+    aliases:
+      analysis:
+        - zero-dimensional Abelian integrals for a Ritt collision
+        - inverse Puiseux support module
+      probability: []
+      combinatorics:
+        - Chinese-remainder support partition modulo 12
+      mathematical_physics:
+        - degree-twelve polynomial exponential periods
+      representation_theory:
+        - S4 standard representation tensored with C3 characters
+        - induced or wreath-product polynomial monodromy
+    known_invariants:
+      quartic_monodromy: "S4"
+      total_monodromy: "S4 x C3 is prior art"
+      support_partition: "{4},{8},{1,7,10},{2,5,11},{3,6,9}"
+
+  - target_id: support-predicted-complete-period-order
+    intended_contribution_unit: bridge
+    claim:
+      exact_statement: |
+        For P,A in C[x], G'=A, let v_j=[P^j A dx] in the one-variable
+        twisted de Rham quotient. The least dependence order q of the v_j is
+        simultaneously (i) the minimal order of a scalar operator
+        annihilating the complete rapid-decay period system, (ii) the number
+        of nontrace residue classes in the inverse series G(xi(t)), and
+        (iii) the reduced root-value span dimension on a generic fibre.
+        For specified standard ray-cycles, if R is the touched channel set,
+          |R| <= ord_min(I_n) <= sum of sizes of monodromy blocks meeting R.
+        A first exact dependence gives a primitive operator and a directly
+        verifiable telescoping witness.
+      exclusions:
+        - no new creative-telescoping algorithm is claimed
+        - no unrestricted equality for an individual cycle is claimed
+        - no arbitrary-contour theorem is claimed
+        - no novelty claim for de Rham/rapid-decay perfect pairing
+        - no absolute priority claim
+    normalisation:
+      quotient: "C(s)[x] dx / (d/dx+sP') C(s)[x] dx"
+      connection: "rank-one exponential connection d+s dP"
+      cyclic_vectors: "v_j=[P^j A dx], corresponding to s-derivatives"
+      support: "nonzero inverse-series exponents modulo d, excluding trace residue 0"
+    sequences:
+      - name: exact_benchmark_orders
+        exact_values: ["0", "1", "2", "3", "4"]
+    small_exact_instances:
+      - "P=x^7,A=1: order 1, coefficients (1,7s)"
+      - "P=x^5-5x^3+5x,A=1: order 2, coefficients (-100s^2-1,25s,25s^2)"
+      - "P=(x^4+x)^3,A=7x^6+7x^3: order 3 with a direct witness"
+      - "P=(x^4+x)^3,A=4x^3: order 4 with a direct witness"
+    generating_functions: []
+    matrices:
+      - name: twisted_Krylov_matrix
+        definition: "columns are exact reductions of A,PA,... in 1,x,...,x^(d-2)"
+        invariants:
+          - "first dependent prefix determines operator order"
+          - "rank equals inverse support cardinality under the reconstructed theorem"
+    aliases:
+      analysis:
+        - exponential Gauss-Manin system
+        - Brieskorn module
+        - rapid-decay period differential equation
+        - Picard-Fuchs equation for exponential integrals
+      probability: []
+      combinatorics: []
+      mathematical_physics:
+        - oscillatory or thimble integral differential equation
+        - WKB or Fourier-Laplace transformed Gauss-Manin system
+      symbolic_computation:
+        - minimal telescoper for a hyperexponential integral
+        - Hermite reduction
+        - creative telescoping by first reduced dependence
+      representation_theory:
+        - cyclic D-module rank
+        - formal-monodromy character blocks
+    known_invariants:
+      quotient_dimension: "deg(P)-1"
+      complete_system_order: "cyclic submodule dimension"
+      support_bridge: "|Sigma(P;G)|"
+      adverse_example: "one touched D3 channel can still have individual order 2"
+
+  - target_id: uniform-zero-cycle-bautin-bound
+    intended_contribution_unit: theorem
+    claim:
+      exact_statement: |
+        Let f be monic of degree d >= 2, C any zero-cycle of f, and
+        g_a=sum_{r=0}^n a_r x^r for arbitrary fixed n. Let B_k be the
+        ordinary ideal in C[a_0,...,a_n] generated by the parameter content of the first k
+        Melnikov coefficients of the displacement of C under f+epsilon g_a.
+        Then B_infinity=B_(d-1). The bound is sharp after complex scalar
+        extension of cycles. For integer cycles, the retained lower witness
+        is d/p, where p is the least prime divisor of d. Consequently the
+        explicitly defined degree-box index satisfies b_coeff(m)<=m-1. This
+        is the source's b(m) only if its terse ideal uses that convention.
+      exclusions:
+        - no claim that every local Bautin convention equals parameter content
+        - no claim that d-1 is sharp for integer-weighted cycles in every degree
+        - no absolute priority claim
+    normalisation:
+      phase: "f monic of exact degree d"
+      perturbation: "generic g of arbitrary fixed degree n"
+      ideal: "ordinary parameter-content ideal, not radical"
+      melnikov_identity: "M_mu=(-1)^mu/mu! D_t^(mu-1) integral_C(g^mu)"
+      quotient: "R[t,x]/(f-t), free of rank d"
+    sequences:
+      - name: complex_cycle_sharp_orders
+        exact_values:
+          - "d=3: 2"
+          - "d=4: 3"
+          - "d=5: 4"
+          - "d=6: 5"
+      - name: integer_cycle_lower_witnesses
+        exact_values:
+          - "d=6: 3"
+          - "d=10: 5"
+          - "d=15: 5"
+    small_exact_instances:
+      - "generic d=2,n=4 quotient: exact Cayley-Hamilton"
+      - "generic d=3,n=5 quotient: exact Cayley-Hamilton"
+      - "power phase d=4,n=6: exact Cayley-Hamilton and ideal screen"
+      - "zero-cycle infinity-monodromy average checked through d=12"
+      - "f=x^6, integer midpoint cycle, g=x: first nonzero order 3"
+    generating_functions: []
+    matrices:
+      - name: generic_multiplication_matrix
+        definition: "multiplication by g in basis 1,x,...,x^(d-1) modulo f(x)-t"
+        invariants:
+          - "entries lie in R[t] for every finite perturbation degree"
+          - "Cayley-Hamilton gives the moment recurrence"
+    aliases:
+      analysis:
+        - zero-cycle displacement Bautin index
+        - higher Melnikov coefficient ideal
+        - zero-dimensional Hilbert 16th problem
+      algebra:
+        - monodromy injectivity of differentiation
+        - content ideal preserved by differentiation
+        - characteristic recurrence in a finite free algebra
+      dynamical_systems:
+        - center conditions for polynomial zero-cycle deformations
+      symbolic_computation:
+        - Cayley-Hamilton recurrence for power moments
+    known_invariants:
+      ordinary_ideal_bound: "d-1"
+      complex_cycle_lower_bound: "d-1"
+      integer_cycle_lower_witness: "d/p for p least prime divisor of d"
+      perturbation_degree_boundary: "none; arbitrary fixed degree n"

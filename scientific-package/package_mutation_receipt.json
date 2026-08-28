@@ -1,0 +1,42 @@
+{
+  "claim_boundary": {
+    "established": "the package verifier rejects the five declared mutation classes for this exact implementation",
+    "not_established": [
+      "proof correctness",
+      "exhaustive verifier security",
+      "independent reproduction",
+      "novelty, peer review, or publication readiness"
+    ]
+  },
+  "mutation_count": 5,
+  "receipt_sha256": "91a3776dd878e64efde800a4a16df42dd368ba38c0d4a48cfd18e6f14bff96f0",
+  "records": [
+    {
+      "expected_diagnostic": "size mismatch",
+      "label": "manifest-member-byte-mutation",
+      "rejected": true
+    },
+    {
+      "expected_diagnostic": "undeclared or missing release members",
+      "label": "undeclared-root-member",
+      "rejected": true
+    },
+    {
+      "expected_diagnostic": "unknown top-level fields",
+      "label": "unknown-manifest-field",
+      "rejected": true
+    },
+    {
+      "expected_diagnostic": "invalid receipt_sha256",
+      "label": "embedded-receipt-digest-mutation",
+      "rejected": true
+    },
+    {
+      "expected_diagnostic": "Atlas archive SHA-256 differs",
+      "label": "atlas-archive-byte-mutation",
+      "rejected": true
+    }
+  ],
+  "schema": "cyclicity-open-problems-package-mutations-v1",
+  "status": "pass"
+}

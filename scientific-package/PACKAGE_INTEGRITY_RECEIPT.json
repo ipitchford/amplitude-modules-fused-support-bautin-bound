@@ -1,0 +1,212 @@
+{
+  "artifact_comparison_count": 14,
+  "claim_boundary": {
+    "established": "exact package-member identity, internal receipt integrity, and claim-boundary presence, and byte-identical replay of 14 retained artifacts from 13 executed commands",
+    "not_established": [
+      "independent validity of the reconstructed support theorem",
+      "historical novelty or priority",
+      "independent review, peer review, or publication readiness",
+      "independent status for any simulated referee report",
+      "authorization to publish or deploy"
+    ]
+  },
+  "command_execution_count": 13,
+  "embedded_receipt_digests": {
+    "amplitude_order_oracle_receipt.json": "f70eb6ba7895a83bc18caaf70c459d511eaa60380dacf644d80d5edbba10f625",
+    "bautin_content_bridge_receipt.json": "a60711a4ec7337ee0d2cb03ee858858d0e60a33a2efb42bfb1b551a3b5d6aa09",
+    "dickson_amplitude_receipt.json": "47384322b1b27ac1c40abf9d8ac35c88c590f1b2049d80372e4ec56519c12103",
+    "exceptional_amplitude_receipt.json": "5f5db74d46fcc6f0fa4d2d47d99d23d44e2cbb939777186846f74af55f682714",
+    "exceptional_channel_independence_receipt.json": "77ae0f635a68c1fff47636b11b78e8c45b711c86da64402f33c94c0cd40187c8",
+    "general_bautin_bound_receipt.json": "e34cdf518d576404885a9553642aa1b53082486694019e4f45017b66e1ce599a",
+    "package_mutation_receipt.json": "91a3776dd878e64efde800a4a16df42dd368ba38c0d4a48cfd18e6f14bff96f0",
+    "power_bautin_uniform_receipt.json": "369c56676262234351ed846294c82a02f452b6387d177676271378dec74bc988",
+    "standalone_weighted_order_receipt.json": "584ecd7ec00a99d3027939dc52a2b2d5dc4a619e15e9fb91b4da63faa31678f6",
+    "support_rank_reconstruction_receipt.json": "2b7300dc5128b5299f3321e3ce181b7af034db17b81e0e64bad60a5e395f0913"
+  },
+  "exact_release_root_verified": true,
+  "manifest_entry_count": 72,
+  "manifest_sha256": "699e07bf26cfbc4d4c4f6a9ed21cb3bee3b543d5a331d3fbecdc4d4301b4c186",
+  "package_allowlist_verified": true,
+  "receipt_sha256": "926b77cef970d241b91b3cbecb103a6fa04ddaeb92b87a1bda7e411614310d64",
+  "replay_requested": true,
+  "replays": [
+    {
+      "byte_identical": true,
+      "command": [
+        "<PYTHON>",
+        "check_support_rank_reconstruction.py",
+        "--depth",
+        "48",
+        "--output",
+        "<REPLAY_OUTPUT>"
+      ],
+      "expected_path": "support_rank_reconstruction_receipt.json",
+      "expected_sha256": "8485e096e37c84e1854f42ce5782b21ed81d9081e1439a480c58a4178c81ad9e"
+    },
+    {
+      "byte_identical": true,
+      "command": [
+        "<PYTHON>",
+        "-O",
+        "check_support_rank_reconstruction.py",
+        "--depth",
+        "48",
+        "--output",
+        "<REPLAY_OUTPUT>"
+      ],
+      "expected_path": "support_rank_reconstruction_receipt.json",
+      "expected_sha256": "8485e096e37c84e1854f42ce5782b21ed81d9081e1439a480c58a4178c81ad9e"
+    },
+    {
+      "byte_identical": true,
+      "command": [
+        "<PYTHON>",
+        "check_dickson_amplitude.py",
+        "--atlas-root",
+        "<VERIFIED_ATLAS_ROOT>",
+        "--maximum-degree",
+        "9",
+        "--output",
+        "<REPLAY_OUTPUT>"
+      ],
+      "expected_path": "dickson_amplitude_receipt.json",
+      "expected_sha256": "3a983d836d685b20892a5d3d0bc9f3604eb367a9aa86ea23b2a490d1d63528f2"
+    },
+    {
+      "byte_identical": true,
+      "command": [
+        "<PYTHON>",
+        "check_exceptional_amplitudes.py",
+        "--atlas-root",
+        "<VERIFIED_ATLAS_ROOT>",
+        "--output",
+        "<REPLAY_OUTPUT>"
+      ],
+      "expected_path": "exceptional_amplitude_receipt.json",
+      "expected_sha256": "242fb45ccbe273d459957defab32ae2c83dd2b1de905cc2a3e337466cd53c707"
+    },
+    {
+      "byte_identical": true,
+      "command": [
+        "<PYTHON>",
+        "check_exceptional_channel_independence.py",
+        "--max-coefficient-degree",
+        "6",
+        "--output",
+        "<REPLAY_OUTPUT>"
+      ],
+      "expected_path": "exceptional_channel_independence_receipt.json",
+      "expected_sha256": "d023dbb3d8e51628d727eb43b17af660c3bc8fb2f35b64b329ed291af6cb6290"
+    },
+    {
+      "byte_identical": true,
+      "command": [
+        "<PYTHON>",
+        "check_bautin_content_bridge.py",
+        "--output",
+        "<REPLAY_OUTPUT>"
+      ],
+      "expected_path": "bautin_content_bridge_receipt.json",
+      "expected_sha256": "420b577adad0f5f0cbb44127e3a3590e6cef37d50c55d720778d85163b5994e7"
+    },
+    {
+      "byte_identical": true,
+      "command": [
+        "<PYTHON>",
+        "check_general_bautin_bound.py",
+        "--output",
+        "<REPLAY_OUTPUT>"
+      ],
+      "expected_path": "general_bautin_bound_receipt.json",
+      "expected_sha256": "cbae3c207ecfde5610002f5b48b605a1f4262c2c1eafec7066c1b168582b7100"
+    },
+    {
+      "byte_identical": true,
+      "command": [
+        "<PYTHON>",
+        "check_package_mutations.py",
+        "--root",
+        "<PACKAGE_ROOT>",
+        "--atlas-archive",
+        "<ATLAS_ARCHIVE>",
+        "--output",
+        "<REPLAY_OUTPUT>"
+      ],
+      "expected_path": "package_mutation_receipt.json",
+      "expected_sha256": "04f74a28ec84b4da4e2d738712d0e53aa223c2e8461b4877653e16111d63c546"
+    },
+    {
+      "byte_identical": true,
+      "command": [
+        "<PYTHON>",
+        "screen_power_bautin_uniform.py",
+        "--output",
+        "<REPLAY_OUTPUT>"
+      ],
+      "expected_path": "power_bautin_uniform_receipt.json",
+      "expected_sha256": "54ebd8cf56888348ac82c5bf989bd16c8c8e36bfa3a474295fe27eb55ba2e0e9"
+    },
+    {
+      "byte_identical": true,
+      "command": [
+        "<PYTHON>",
+        "check_amplitude_order_oracle.py",
+        "--atlas-root",
+        "<VERIFIED_ATLAS_ROOT>",
+        "--output",
+        "<REPLAY_OUTPUT>"
+      ],
+      "expected_path": "amplitude_order_oracle_receipt.json",
+      "expected_sha256": "cd63e1f1204368246d7afb07a4c3971b45cdc4c05df790cd02f794743a85d350"
+    },
+    {
+      "byte_identical": true,
+      "command": [
+        "<PYTHON>",
+        "check_standalone_weighted_order_oracle.py",
+        "--producer-receipt",
+        "amplitude_order_oracle_receipt.json",
+        "--output",
+        "<REPLAY_OUTPUT>"
+      ],
+      "expected_path": "standalone_weighted_order_receipt.json",
+      "expected_sha256": "5a4520656f7c023de7a63b2c75fadd60aabba578c43e0cc4c285de770d2fac1c"
+    },
+    {
+      "byte_identical": true,
+      "command": [
+        "<PYTHON>",
+        "-O",
+        "check_standalone_weighted_order_oracle.py",
+        "--producer-receipt",
+        "amplitude_order_oracle_receipt.json",
+        "--output",
+        "<REPLAY_OUTPUT>"
+      ],
+      "expected_path": "standalone_weighted_order_receipt.json",
+      "expected_sha256": "5a4520656f7c023de7a63b2c75fadd60aabba578c43e0cc4c285de770d2fac1c"
+    },
+    {
+      "byte_identical": true,
+      "command": [
+        "bash",
+        "build_preprint.sh",
+        "<REPLAY_OUTPUT_DIR>"
+      ],
+      "expected_path": "CANDIDATE_PREPRINT.tex",
+      "expected_sha256": "4884ea88911e2c3a4db0fccdfc263791a6b0f34f29ea79ec4b9ac3a5deda939f"
+    },
+    {
+      "byte_identical": true,
+      "command": [
+        "bash",
+        "build_preprint.sh",
+        "<REPLAY_OUTPUT_DIR>"
+      ],
+      "expected_path": "CANDIDATE_PREPRINT.pdf",
+      "expected_sha256": "5a4c00f34873e9a0c691ce375a40f78449b671b9fe2bdfcfe1ea7deead4ebb99"
+    }
+  ],
+  "schema": "cyclicity-open-problems-candidate-integrity-v1",
+  "status": "pass"
+}

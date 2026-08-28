@@ -1,0 +1,98 @@
+{
+  "case": {
+    "cycle": "x_1-x_2 with x_2=-1-x_1",
+    "perturbation": "a0+a1*x+a2*x^2+a3*x^3+a4*x^4",
+    "perturbation_degree": 4,
+    "phase": "x^2+x",
+    "phase_degree": 2,
+    "regular_jet_base_point": "x=1, t=2"
+  },
+  "claim_boundary": {
+    "established_by_this_check": [
+      "direct implicit-root and Lagrange--B\u00fcrmann coefficients agree",
+      "parameter content survives the required derivatives",
+      "finite local Taylor jets recover parameter content",
+      "the d-1 cutoff survives in one non-power case with deg(g)>deg(f)",
+      "at least one dependent coefficient-function span is exercised"
+    ],
+    "not_established": [
+      "the all-degree theorem",
+      "historical novelty",
+      "independent review or publication readiness"
+    ]
+  },
+  "order_checks": [
+    {
+      "coefficient_span": {
+        "coefficient_function_span_dimension": 2,
+        "has_dependent_coefficient_functions": true,
+        "parameter_monomial_count": 4
+      },
+      "content_groebner_basis": [
+        "a1 - a2 + a4",
+        "a3 - 2*a4"
+      ],
+      "direct_identity_residual_is_zero": true,
+      "first_sufficient_jet_count": 2,
+      "local_taylor_ideal_equals_content": true,
+      "moment_content_equals_melnikov_content": true,
+      "order": 1
+    },
+    {
+      "coefficient_span": {
+        "coefficient_function_span_dimension": 4,
+        "has_dependent_coefficient_functions": true,
+        "parameter_monomial_count": 14
+      },
+      "content_groebner_basis": [
+        "a1**3*a4 - a2**3*a4 + 3*a2**2*a4**2 - 3*a2*a4**3 + a4**4",
+        "a0**2*a3 - 2*a0**2*a4 - a1**2*a3/4 + a1*a3**2/4 + a2**2*a4/2 - 2*a2*a4**2 - a3**3/16 + 2*a4**3",
+        "a0*a3**2 - 4*a0*a4**2 - a1**2*a4 - a1*a3**2/2 + a2**2*a4 + a3**3/4 - 3*a4**3",
+        "a1*a4**2 - a2*a4**2 + a4**3",
+        "a0*a1 - a0*a2 + a0*a4 - a1**2/2 + a1*a3 + a2**2/2 - 3*a2*a4 - 3*a3**2/2 + 17*a4**2/2",
+        "a0*a3 - 2*a0*a4 + a1*a2 - 2*a1*a3 - a2**2 + 5*a2*a4 + 5*a3**2/2 - 14*a4**2",
+        "a1*a4 + a2*a3 - 3*a2*a4 - 3*a3**2/2 + 7*a4**2",
+        "a3*a4 - 2*a4**2"
+      ],
+      "direct_identity_residual_is_zero": true,
+      "first_sufficient_jet_count": 4,
+      "local_taylor_ideal_equals_content": true,
+      "moment_content_equals_melnikov_content": true,
+      "order": 2
+    },
+    {
+      "coefficient_span": {
+        "coefficient_function_span_dimension": 6,
+        "has_dependent_coefficient_functions": true,
+        "parameter_monomial_count": 34
+      },
+      "content_groebner_basis": [
+        "a0*a1**2*a4**3 - a0*a2**2*a4**3 + 2*a0*a2*a4**4 - a0*a4**5",
+        "a0**4*a3 - 2*a0**4*a4 + a0**3*a3**2 - 8*a0**3*a3*a4 + 12*a0**3*a4**2 + 7*a0**2*a2*a3*a4/4 - 7*a0**2*a2*a4**2/2 - 3*a0*a1**2*a2*a4/2 - 3*a0*a1**2*a3**2/2 + 7*a0*a1**2*a3*a4/4 - 10*a0*a1**2*a4**2 - 4*a0*a1*a2*a3*a4 + 107*a0*a1*a2*a4**2/2 + 107*a0*a1*a3**2*a4/2 + 513*a0*a1*a4**3/16 + 3*a0*a2**3*a4/2 - 36*a0*a2**2*a4**2 - 3585*a0*a2*a4**3/16 + 4137*a0*a4**4/16 + 13*a1**2*a2*a3**2/8 - 2815*a1**2*a2*a4**2/32 - 1663*a1**2*a3**2*a4/32 + 825*a1**2*a4**3/4 + 2607*a2**3*a4**2/32 - 2581*a2**2*a4**3/16 + 2503*a2*a4**4/32 + 13*a4**5/8",
+        "a0**3*a2*a3 - 2*a0**3*a2*a4 - 3*a0**3*a3**2/2 - 3*a0**3*a3*a4 + 12*a0**3*a4**2 + 15*a0*a1*a2*a4**2/2 + 15*a0*a1*a3**2*a4/2 - 75*a0*a1*a4**3/2 - 15*a0*a2**2*a4**2/2 + 15*a0*a2*a4**3 - 15*a0*a4**4/2 - 45*a1**2*a2*a4**2/4 - 15*a1**2*a3**2*a4/4 + 30*a1**2*a4**3 + 45*a2**3*a4**2/4 - 75*a2**2*a4**3/2 + 165*a2*a4**4/4 - 15*a4**5",
+        "-12*a0**3*a3*a4 + 24*a0**3*a4**2 - 79*a0**2*a2*a3*a4/4 + 79*a0**2*a2*a4**2/2 + a0*a1**2*a2*a3 - 5*a0*a1**2*a2*a4/2 - 5*a0*a1**2*a3**2/2 - 79*a0*a1**2*a3*a4/4 + 34*a0*a1**2*a4**2 - 8*a0*a1*a2*a3*a4 + 553*a0*a1*a2*a4**2/2 + 553*a0*a1*a3**2*a4/2 - 11561*a0*a1*a4**3/16 + a0*a2**3*a4/2 - 246*a0*a2**2*a4**2 - 2455*a0*a2*a4**3/16 + 6383*a0*a4**4/16 + 11*a1**2*a2*a3**2/8 - 13057*a1**2*a2*a4**2/32 - 5185*a1**2*a3**2*a4/32 + 893*a1**2*a4**3 + 12881*a2**3*a4**2/32 - 16799*a2**2*a4**3/16 + 28553*a2*a4**4/32 - 1959*a4**5/8",
+        "-9*a0*a1*a2*a4**2 - 6*a0*a1*a3**2*a4 + 3*a0*a1*a4**3/2 + 9*a0*a2**2*a4**2 + 27*a0*a2*a4**3/2 - 45*a0*a4**4/2 + a1**2*a2*a3*a4 + 25*a1**2*a2*a4**2/2 + 7*a1**2*a3**2*a4/2 - 77*a1**2*a4**3/4 - 29*a2**3*a4**2/2 + 137*a2**2*a4**3/4 - 25*a2*a4**4 + 21*a4**5/4",
+        "a0**2*a3**2*a4 - 4*a0**2*a4**3 - a0*a1**2*a4**2 - a0*a1*a2*a4**2 - a0*a1*a3**2*a4 + 25*a0*a1*a4**3/2 + 2*a0*a2**2*a4**2 - 23*a0*a2*a4**3/2 + 19*a0*a4**4/2 + 9*a1**2*a2*a4**2/4 + a1**2*a3**2*a4/4 - 15*a1**2*a4**3/2 - 9*a2**3*a4**2/4 + 11*a2**2*a4**3 - 61*a2*a4**4/4 + 13*a4**5/2",
+        "-12*a0*a1*a4**3 + 12*a0*a2*a4**3 - 12*a0*a4**4 + 15*a1**2*a4**3/2 + a1*a2*a3**2*a4 - 23*a2**2*a4**3/2 + 19*a2*a4**4 - 15*a4**5/2",
+        "a1*a2*a4**3 - a2**2*a4**3 + a2*a4**4",
+        "a1*a4**4 - a2*a4**4 + a4**5",
+        "a0*a1*a4**2/2 + a0*a2*a3**2 + a0*a2*a3*a4 - 13*a0*a2*a4**2/2 - 19*a0*a3**2*a4/2 + 77*a0*a4**3/2 - a1**2*a2*a4 - a1**2*a3*a4/2 + 3*a1**2*a4**2 - a1*a2*a3**2/2 + 6*a1*a2*a3*a4 + 8*a1*a2*a4**2 + 8*a1*a3**2*a4 - 123*a1*a4**3 + a2**3*a4 - 22*a2**2*a4**2 - 22*a2*a3**2*a4 + 202*a2*a4**3 - 93*a4**4",
+        "a0**2*a1 - a0**2*a2 + a0**2*a4 - a0*a1**2 + 2*a0*a1*a3 + a0*a2**2 - 6*a0*a2*a4 - 3*a0*a3**2 + 17*a0*a4**2 + a1**2*a2 - 3*a1**2*a4 - 6*a1*a2*a3 + 34*a1*a3*a4 - a2**3 + 17*a2**2*a4 + 17*a2*a3**2 - 155*a2*a4**2 - 155*a3**2*a4 + 691*a4**3",
+        "3*a0**2*a3 - 6*a0**2*a4 + 6*a0*a1*a2 - 12*a0*a1*a3 - 6*a0*a2**2 + 30*a0*a2*a4 + 15*a0*a3**2 - 84*a0*a4**2 + a1**3 - 6*a1**2*a2 + 15*a1**2*a4 + 30*a1*a2*a3 - 168*a1*a3*a4 + 5*a2**3 - 84*a2**2*a4 - 84*a2*a3**2 + 765*a2*a4**2 + 765*a3**2*a4 - 3410*a4**3",
+        "2*a0*a1*a4 + 2*a0*a2*a3 - 6*a0*a2*a4 - 3*a0*a3**2 + 14*a0*a4**2 + a1**2*a3 - 3*a1**2*a4 + a1*a2**2 - 6*a1*a2*a3 + 28*a1*a3*a4 - a2**3 + 14*a2**2*a4 + 14*a2*a3**2 - 126*a2*a4**2 - 126*a3**2*a4 + 561*a4**3",
+        "2*a0*a3*a4 - 4*a0*a4**2 + 2*a1*a2*a4 + a1*a3**2 - 8*a1*a3*a4 + a2**2*a3 - 4*a2**2*a4 - 4*a2*a3**2 + 30*a2*a4**2 + 30*a3**2*a4 - 132*a4**3",
+        "3*a1*a4**2 + 6*a2*a3*a4 - 15*a2*a4**2 + a3**3 - 15*a3**2*a4 + 55*a4**3",
+        "a3*a4**2 - 2*a4**3"
+      ],
+      "direct_identity_residual_is_zero": true,
+      "first_sufficient_jet_count": 6,
+      "local_taylor_ideal_equals_content": true,
+      "moment_content_equals_melnikov_content": true,
+      "order": 3
+    }
+  ],
+  "quadratic_cutoff_content_stable_through_order": 3,
+  "receipt_sha256": "a60711a4ec7337ee0d2cb03ee858858d0e60a33a2efb42bfb1b551a3b5d6aa09",
+  "schema": "bautin-content-bridge-falsification-v1",
+  "status": "pass"
+}

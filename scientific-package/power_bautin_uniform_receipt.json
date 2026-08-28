@@ -1,0 +1,898 @@
+{
+  "cayley_hamilton_checks": [
+    {
+      "all_matrix_residuals_zero": true,
+      "characteristic_polynomial_sha256": "e9b7ae534556c8052d457710644e37d17f4b435ad0ef49284e635702a158eb7e",
+      "degree": 2,
+      "matrix_shape": [
+        2,
+        2
+      ],
+      "parameter_count": 5,
+      "perturbation_degree": 4
+    },
+    {
+      "all_matrix_residuals_zero": true,
+      "characteristic_polynomial_sha256": "feed136a95050c912f897939ad285f56b5daaba32394dba84a200d330c38eea1",
+      "degree": 3,
+      "matrix_shape": [
+        3,
+        3
+      ],
+      "parameter_count": 6,
+      "perturbation_degree": 5
+    },
+    {
+      "all_matrix_residuals_zero": true,
+      "characteristic_polynomial_sha256": "69d95785ec56f0f902aed1e86a2f2bf2fc30215e8ff3e153ad17e8cb5cfdc488",
+      "degree": 4,
+      "matrix_shape": [
+        4,
+        4
+      ],
+      "parameter_count": 7,
+      "perturbation_degree": 6
+    }
+  ],
+  "claim_boundary": {
+    "established_by_exact_finite_checks": [
+      "generic multiplication-matrix Cayley--Hamilton identities for d=2,...,4 with n=d+2",
+      "representative rectangular coefficient-ideal reductions through order eight",
+      "exact Fourier supports and first-hit orders of integer witnesses through the declared degree",
+      "the algebraic character-orthogonality form of the complex-cycle witnesses"
+    ],
+    "not_established": [
+      "sharpness of d-1 when cycles are required to have integer coefficients",
+      "novelty, independent review, peer review, or publication readiness"
+    ],
+    "requires_written_proof": [
+      "ordinary coefficient-ideal stabilization by order d-1 for every d and n",
+      "equivalence between active power coordinates and Melnikov coefficient ideals"
+    ]
+  },
+  "coefficient_ideal_screens": [
+    {
+      "active_residues": [
+        1
+      ],
+      "case": "quadratic-rectangular",
+      "checked_through": 6,
+      "cutoff": 1,
+      "degree": 2,
+      "groebner_basis": [
+        "a1",
+        "a3"
+      ],
+      "higher_order_reductions": [
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 4,
+          "order": 2
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 6,
+          "order": 3
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 8,
+          "order": 4
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 10,
+          "order": 5
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 12,
+          "order": 6
+        }
+      ],
+      "perturbation_degree": 4
+    },
+    {
+      "active_residues": [
+        1
+      ],
+      "case": "cubic-rectangular-r1",
+      "checked_through": 7,
+      "cutoff": 2,
+      "degree": 3,
+      "groebner_basis": [
+        "a2**2",
+        "a2*a5",
+        "a5**2",
+        "a1",
+        "a4"
+      ],
+      "higher_order_reductions": [
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 5,
+          "order": 3
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 7,
+          "order": 4
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 9,
+          "order": 5
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 10,
+          "order": 6
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 12,
+          "order": 7
+        }
+      ],
+      "perturbation_degree": 5
+    },
+    {
+      "active_residues": [
+        2
+      ],
+      "case": "cubic-rectangular-r2",
+      "checked_through": 7,
+      "cutoff": 2,
+      "degree": 3,
+      "groebner_basis": [
+        "a1**2",
+        "a1*a4",
+        "a4**2",
+        "a2",
+        "a5"
+      ],
+      "higher_order_reductions": [
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 5,
+          "order": 3
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 7,
+          "order": 4
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 8,
+          "order": 5
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 10,
+          "order": 6
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 12,
+          "order": 7
+        }
+      ],
+      "perturbation_degree": 5
+    },
+    {
+      "active_residues": [
+        2
+      ],
+      "case": "quartic-integer-midpoint",
+      "checked_through": 8,
+      "cutoff": 3,
+      "degree": 4,
+      "groebner_basis": [
+        "a1**2",
+        "2*a1*a5 + a3**2",
+        "a5**2",
+        "a2",
+        "a6"
+      ],
+      "higher_order_reductions": [
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 6,
+          "order": 4
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 8,
+          "order": 5
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 9,
+          "order": 6
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 11,
+          "order": 7
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 12,
+          "order": 8
+        }
+      ],
+      "perturbation_degree": 6
+    },
+    {
+      "active_residues": [
+        3
+      ],
+      "case": "sextic-integer-midpoint",
+      "checked_through": 8,
+      "cutoff": 5,
+      "degree": 6,
+      "groebner_basis": [
+        "a2**3*a5",
+        "a2**2*a5**2",
+        "a1**3",
+        "a1*a4**2 + a2**2*a5",
+        "a5**3",
+        "a1*a2",
+        "a4*a5",
+        "a3"
+      ],
+      "higher_order_reductions": [
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 6,
+          "order": 6
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 7,
+          "order": 7
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 8,
+          "order": 8
+        }
+      ],
+      "perturbation_degree": 6
+    },
+    {
+      "active_residues": [
+        1,
+        5
+      ],
+      "case": "sextic-published-support",
+      "checked_through": 8,
+      "cutoff": 5,
+      "degree": 6,
+      "groebner_basis": [
+        "a2*a3",
+        "a3*a4",
+        "a1",
+        "a5"
+      ],
+      "higher_order_reductions": [
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 12,
+          "order": 6
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 14,
+          "order": 7
+        },
+        {
+          "all_reduce_to_zero": true,
+          "generator_count": 16,
+          "order": 8
+        }
+      ],
+      "perturbation_degree": 6
+    }
+  ],
+  "coefficient_ring": "Q[a_0,...,a_n], including screened cases n>d",
+  "complex_cycle_sharpness_witnesses": [
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 2,
+      "first_nonzero_order": 1,
+      "fourier_support": [
+        1
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 3,
+      "first_nonzero_order": 2,
+      "fourier_support": [
+        2
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 4,
+      "first_nonzero_order": 3,
+      "fourier_support": [
+        3
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 5,
+      "first_nonzero_order": 4,
+      "fourier_support": [
+        4
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 6,
+      "first_nonzero_order": 5,
+      "fourier_support": [
+        5
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 7,
+      "first_nonzero_order": 6,
+      "fourier_support": [
+        6
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 8,
+      "first_nonzero_order": 7,
+      "fourier_support": [
+        7
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 9,
+      "first_nonzero_order": 8,
+      "fourier_support": [
+        8
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 10,
+      "first_nonzero_order": 9,
+      "fourier_support": [
+        9
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 11,
+      "first_nonzero_order": 10,
+      "fourier_support": [
+        10
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 12,
+      "first_nonzero_order": 11,
+      "fourier_support": [
+        11
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 13,
+      "first_nonzero_order": 12,
+      "fourier_support": [
+        12
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 14,
+      "first_nonzero_order": 13,
+      "fourier_support": [
+        13
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 15,
+      "first_nonzero_order": 14,
+      "fourier_support": [
+        14
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 16,
+      "first_nonzero_order": 15,
+      "fourier_support": [
+        15
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 17,
+      "first_nonzero_order": 16,
+      "fourier_support": [
+        16
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    },
+    {
+      "coefficient_field": "Q(omega), generally not Z",
+      "degree": 18,
+      "first_nonzero_order": 17,
+      "fourier_support": [
+        17
+      ],
+      "orthogonality_identity": "sum_j omega^(j*(r+1)) is d for r=d-1 and zero otherwise",
+      "perturbation": "g=x",
+      "weights": "n_j=omega^j"
+    }
+  ],
+  "integer_cycle_lower_bound_witnesses": [
+    {
+      "degree": 2,
+      "first_nonzero_order": 1,
+      "fourier_support": [
+        1
+      ],
+      "least_prime_divisor": 2,
+      "perturbation": "g=x",
+      "weights": [
+        1,
+        -1
+      ]
+    },
+    {
+      "degree": 3,
+      "first_nonzero_order": 1,
+      "fourier_support": [
+        1,
+        2
+      ],
+      "least_prime_divisor": 3,
+      "perturbation": "g=x",
+      "weights": [
+        2,
+        -1,
+        -1
+      ]
+    },
+    {
+      "degree": 4,
+      "first_nonzero_order": 2,
+      "fourier_support": [
+        2
+      ],
+      "least_prime_divisor": 2,
+      "perturbation": "g=x",
+      "weights": [
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "degree": 5,
+      "first_nonzero_order": 1,
+      "fourier_support": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "least_prime_divisor": 5,
+      "perturbation": "g=x",
+      "weights": [
+        4,
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "degree": 6,
+      "first_nonzero_order": 3,
+      "fourier_support": [
+        3
+      ],
+      "least_prime_divisor": 2,
+      "perturbation": "g=x",
+      "weights": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "degree": 7,
+      "first_nonzero_order": 1,
+      "fourier_support": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "least_prime_divisor": 7,
+      "perturbation": "g=x",
+      "weights": [
+        6,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "degree": 8,
+      "first_nonzero_order": 4,
+      "fourier_support": [
+        4
+      ],
+      "least_prime_divisor": 2,
+      "perturbation": "g=x",
+      "weights": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "degree": 9,
+      "first_nonzero_order": 3,
+      "fourier_support": [
+        3,
+        6
+      ],
+      "least_prime_divisor": 3,
+      "perturbation": "g=x",
+      "weights": [
+        2,
+        -1,
+        -1,
+        2,
+        -1,
+        -1,
+        2,
+        -1,
+        -1
+      ]
+    },
+    {
+      "degree": 10,
+      "first_nonzero_order": 5,
+      "fourier_support": [
+        5
+      ],
+      "least_prime_divisor": 2,
+      "perturbation": "g=x",
+      "weights": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "degree": 11,
+      "first_nonzero_order": 1,
+      "fourier_support": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "least_prime_divisor": 11,
+      "perturbation": "g=x",
+      "weights": [
+        10,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "degree": 12,
+      "first_nonzero_order": 6,
+      "fourier_support": [
+        6
+      ],
+      "least_prime_divisor": 2,
+      "perturbation": "g=x",
+      "weights": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "degree": 13,
+      "first_nonzero_order": 1,
+      "fourier_support": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "least_prime_divisor": 13,
+      "perturbation": "g=x",
+      "weights": [
+        12,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "degree": 14,
+      "first_nonzero_order": 7,
+      "fourier_support": [
+        7
+      ],
+      "least_prime_divisor": 2,
+      "perturbation": "g=x",
+      "weights": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "degree": 15,
+      "first_nonzero_order": 5,
+      "fourier_support": [
+        5,
+        10
+      ],
+      "least_prime_divisor": 3,
+      "perturbation": "g=x",
+      "weights": [
+        2,
+        -1,
+        -1,
+        2,
+        -1,
+        -1,
+        2,
+        -1,
+        -1,
+        2,
+        -1,
+        -1,
+        2,
+        -1,
+        -1
+      ]
+    },
+    {
+      "degree": 16,
+      "first_nonzero_order": 8,
+      "fourier_support": [
+        8
+      ],
+      "least_prime_divisor": 2,
+      "perturbation": "g=x",
+      "weights": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "degree": 17,
+      "first_nonzero_order": 1,
+      "fourier_support": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "least_prime_divisor": 17,
+      "perturbation": "g=x",
+      "weights": [
+        16,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "degree": 18,
+      "first_nonzero_order": 9,
+      "fourier_support": [
+        9
+      ],
+      "least_prime_divisor": 2,
+      "perturbation": "g=x",
+      "weights": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    }
+  ],
+  "phase_family": "f=x^d",
+  "receipt_sha256": "369c56676262234351ed846294c82a02f452b6387d177676271378dec74bc988",
+  "schema": "power-phase-bautin-falsification-v2",
+  "status": "pass"
+}
