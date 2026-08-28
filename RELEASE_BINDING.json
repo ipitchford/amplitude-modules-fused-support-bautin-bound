@@ -85,6 +85,19 @@
     "repository": "https://github.com/ipitchford/amplitude-modules-fused-support-bautin-bound",
     "repository_manifest": "MANIFEST.sha256"
   },
+  "public_identity": {
+    "github_repository": "https://github.com/ipitchford/amplitude-modules-fused-support-bautin-bound",
+    "zenodo_concept_doi": "10.5281/zenodo.22143918",
+    "zenodo_deposition_id": 22143919,
+    "zenodo_record_snapshot": {
+      "file_count": 9,
+      "record_url": "https://zenodo.org/records/22143919",
+      "release_binding_sha256": "c36ea5afbe2270794124b6130ec1bfd21245e31540bb845d69ac972b9c821051",
+      "release_manifest_sha256": "124ad8c1b4bc1c3defc6c91d1e6c69c8cb05e94fbb7c3f97c2e41332d6b60db6"
+    },
+    "zenodo_status": "published_assets_verified",
+    "zenodo_version_doi": "10.5281/zenodo.22143919"
+  },
   "review_target": {
     "preflight_git_head": "52504ae815f61841325c6cda3b414d69dd55c702",
     "reviewed_archive_sha256": "aa1e73f62ccb89bae6ff00aaee844721172eca515d4da64c4c41539e51977b13"

@@ -12,6 +12,8 @@
 | Optimized JUnit | `29320033cdee706a27fd3e4076eede9890fd5cf169c42e61e9715c85c2afa94a` |
 | JUnit parity receipt | `4b6e51616a935e6b22073a3065d562878d5a19b13931180791e4fbfc6997cddb` |
 | Confirmation record | `05a876e92465ef6b628b1913ec4fb56a66727ed24715ced28601972239713d0e` |
+| Reserved version DOI | `10.5281/zenodo.22143919` |
+| Concept DOI | `10.5281/zenodo.22143918` |
 
 `RELEASE_BINDING.json` adds the immutable Git content commit and tree, public
 record identifiers, asset hashes, and publication closeout disposition. Source

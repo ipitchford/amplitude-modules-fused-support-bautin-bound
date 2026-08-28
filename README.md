@@ -10,6 +10,10 @@ have been solved. It has deterministic internal replay and a documented
 model-mediated editorial process, but no independent specialist validation,
 journal peer review, formal verification, settled priority, or submission.
 
+Versioned record: [10.5281/zenodo.22143919](https://doi.org/10.5281/zenodo.22143919)
+
+All versions: [10.5281/zenodo.22143918](https://doi.org/10.5281/zenodo.22143918)
+
 ## Read the candidate
 
 - [Accessible HTML](release-assets/CANDIDATE_PREPRINT.html)

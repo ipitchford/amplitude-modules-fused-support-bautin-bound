@@ -112,7 +112,11 @@ def main() -> int:
 
     status_text = (root / "STATUS.md").read_text(encoding="utf-8")
     licence_text = (root / "LICENSES.md").read_text(encoding="utf-8")
-    require("accepted for publication as an anonymous unrefereed Evidence Press" in status_text, "release status is not reconciled")
+    status_markers = [
+        "accepted for publication as an anonymous unrefereed Evidence Press",
+        "published on GitHub and Zenodo as an anonymous unrefereed Evidence",
+    ]
+    require(any(marker in status_text for marker in status_markers), "release status is not reconciled")
     require("CC0-1.0" in licence_text and "MIT" in licence_text, "licence map is incomplete")
 
     receipt = {

@@ -4,8 +4,8 @@
 
 **Date:** 28 August 2026
 
-**Status:** accepted for publication as an anonymous unrefereed Evidence Press
-candidate, subject only to final public-identity and deployment readback.
+**Status:** published on GitHub and Zenodo as an anonymous unrefereed Evidence
+Press candidate; Evidence Press site deployment and readback remain pending.
 
 The frozen scientific target is
 `amplitude-modules-fused-support-bautin-bound-v0.1.0-candidate-r2.zip`, SHA-256
